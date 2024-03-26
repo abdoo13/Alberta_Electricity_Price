@@ -25,12 +25,12 @@ clear_output()
 import joblib
 #from prediction import predict
 
-drive.mount('/content/drive')
-path_files = "/content/drive/MyDrive/2023_DSMP_Project/WebApp - StreamLit"
+#drive.mount('/content/drive')
+#path_files = "/content/drive/MyDrive/2023_DSMP_Project/WebApp - StreamLit"
 
 """## **2 - Setup and Loading Information**"""
 
-data = pd.read_csv(path_files + '/' + 'df_.csv')
+data = pd.read_csv('df_.csv')
 # Get column names
 column_names = list(data.columns)[1:-1]
 for col in column_names:
@@ -65,7 +65,7 @@ df['Sector'] = df['Sector'].astype('float')
 df#['Sector'][0]
 
 # Load the ML Model
-model = joblib.load(path_files + '/' + 'lgbm_model.sav')
+model = joblib.load('lgbm_model.sav')
 model.set_params(n_classes=1)
 clear_output()
 
