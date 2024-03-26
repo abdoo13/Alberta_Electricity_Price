@@ -10,8 +10,8 @@ Original file is located at
 """
 
 #!pip install streamlit
-from IPython.display import clear_output
-clear_output()
+#from IPython.display import clear_output
+#clear_output()
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 #!pip install prediction
 #!pip install joblib
-clear_output()
+#clear_output()
 import joblib
 #from prediction import predict
 
@@ -67,12 +67,12 @@ df#['Sector'][0]
 # Load the ML Model
 model = joblib.load('lgbm_model.sav')
 model.set_params(n_classes=1)
-clear_output()
+#clear_output()
 
 # Predict and display the results
 #prediction = model.predict(temp.values.reshape(1, -1))
 preds = model.predict(df.values)
-clear_output()
+#clear_output()
 st.subheader('Prediction')
 st.write(f'The predicted Electricity Price is: {np.round(preds,2)}')
 
