@@ -21,7 +21,7 @@ import numpy as np
 #import seaborn as sns
 #!pip install prediction
 #!pip install joblib
-clear_output()
+#clear_output()
 import joblib
 #from prediction import predict
 
