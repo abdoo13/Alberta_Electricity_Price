@@ -21,11 +21,10 @@ Original file is located at
 #Run the Streamlit app in the background
 !streamlit run app.py &>/content/logs.txt &
 
-"""import urllib
+import urllib
 print("Password/Enpoint IP for localtunnel is:",urllib.request.urlopen('https://ipv4.icanhazip.com').read().decode('utf8').strip("\n"))
 
 # Expose the Streamlit app on port 8501
 # Then just click in the url showed.
 
 !npx localtunnel --port 8501
-"""
