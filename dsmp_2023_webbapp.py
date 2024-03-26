@@ -15,7 +15,7 @@ Original file is located at
 import streamlit as st
 import pandas as pd
 import numpy as np
-from google.colab import files, drive
+#from google.colab import files, drive
 from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
 import seaborn as sns
