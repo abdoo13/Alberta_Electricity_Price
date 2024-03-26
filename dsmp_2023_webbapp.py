@@ -16,7 +16,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 #from google.colab import files, drive
-from sklearn.preprocessing import LabelEncoder
+#from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
 import seaborn as sns
 #!pip install prediction
