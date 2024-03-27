@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 #import numpy as np
+import skops.io as sio
 #import sklrn
 #from joblib import load
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
