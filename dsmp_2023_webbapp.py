@@ -1,8 +1,8 @@
-#import joblib
-import pickle
 import streamlit as st
 import pandas as pd
-import numpy as np
+#import numpy as np
+import sklearn
+#import joblib
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 data = pd.read_csv('df_.csv')
 # Get column names
