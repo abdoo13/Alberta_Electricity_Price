@@ -9,24 +9,10 @@ Original file is located at
 ## **1 - Importing Libraries & Utilities**
 """
 
-#!pip install streamlit
-#from IPython.display import clear_output
-#clear_output()
-#import streamlit as st
+import streamlit as st
 import pandas as pd
 import numpy as np
-#from google.colab import files, drive
-#from sklearn.preprocessing import LabelEncoder
-#import matplotlib.pyplot as plt
-#import seaborn as sns
-#!pip install prediction
-#!pip install joblib
-#clear_output()
-import joblib
-#from prediction import predict
-
-#drive.mount('/content/drive')
-#path_files = "/content/drive/MyDrive/2023_DSMP_Project/WebApp - StreamLit"
+#import joblib
 
 """## **2 - Setup and Loading Information**"""
 
