@@ -32,7 +32,6 @@ df['Sector'] = df['Sector'].astype('float')
 """model = joblib.load('lgbm_model.sav')"""
 model = pickle.load(open('lgbm_model_pickle.sav', 'rb'))
 model.set_params(n_classes=1)
-clear_output()
 
 # Predict and display the results
 #prediction = model.predict(temp.values.reshape(1, -1))
