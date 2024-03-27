@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 import pandas as pd
 import numpy as np
-from lightgbm import LGBMRegressor
+#from lightgbm import LGBMRegressor
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 data = pd.read_csv('df_.csv')
 # Get column names
