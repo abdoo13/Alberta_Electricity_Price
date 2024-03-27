@@ -23,6 +23,8 @@ user_input_prediction = {}
 for column in column_names:
   if data[column].dtype != 'O':
     user_input_prediction[column] = st.sidebar.slider(f'Select {column}', float(data[column].min()), float(data[column].max()), float(data[column].mean()))
+
+st.button("Predict Electricity Prices")      
 """"""""""""""""""""""""""""""""""""""""""""""""
 st.title('Predicting Electricity Prices at the Alberta Region')
 st.markdown('This app allows predicting Electricty prices for the Alberta region considering the "Residential", "Commercial" and the "Industrial" Sectors.')
