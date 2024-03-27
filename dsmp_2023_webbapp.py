@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-data = pd.read_csv('df_.csv')
+data = pd.read_csv('dfè_.csv')
 # Get column names
 column_names = list(data.columns)[1:-1]
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
