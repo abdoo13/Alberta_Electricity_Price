@@ -17,10 +17,6 @@ data = pd.read_csv('df_.csv')
 # Get column names
 column_names = list(data.columns)[1:-1]
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-st.title('Predicting Electricity Prices at the Alberta Region')
-st.markdown('This app allows predicting Electricty prices for the Alberta region considering the "Residential", "Commercial" and the "Industrial" Sectors.')
-
 """ Feature Inputs """
 st.sidebar.header("Features' Input")
 st.sidebar.markdown('<h2 style="color: blue;"> Select the values of input variables to predict the target variable</h2>', unsafe_allow_html=True)
@@ -28,7 +24,10 @@ user_input_prediction = {}
 for column in column_names:
   if data[column].dtype != 'O':
     user_input_prediction[column] = st.sidebar.slider(f'Select {column}', float(data[column].min()), float(data[column].max()), float(data[column].mean()))
-  
+""""""""""""""""""""""""""""""""""""""""""""""""
+st.title('Predicting Electricity Prices at the Alberta Region')
+st.markdown('This app allows predicting Electricty prices for the Alberta region considering the "Residential", "Commercial" and the "Industrial" Sectors.')
+
 df = pd.DataFrame()
 list_ = sorted(data['Sector'].unique().tolist())
 #
