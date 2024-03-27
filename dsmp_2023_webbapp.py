@@ -12,7 +12,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 #import joblib
-""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 data = pd.read_csv('df_.csv')
 # Get column names
 column_names = list(data.columns)[1:-1]
