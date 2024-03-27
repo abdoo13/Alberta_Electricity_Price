@@ -3,7 +3,6 @@ import pickle
 import streamlit as st
 import pandas as pd
 import numpy as np
-import lightgbm as lgb
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 data = pd.read_csv('df_.csv')
 # Get column names
