@@ -22,7 +22,7 @@ import numpy as np
 #!pip install prediction
 #!pip install joblib
 #clear_output()
-#import joblib
+import joblib
 #from prediction import predict
 
 #drive.mount('/content/drive')
