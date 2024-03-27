@@ -17,7 +17,6 @@ data = pd.read_csv('df_.csv')
 # Get column names
 column_names = list(data.columns)[1:-1]
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Feature Inputs """
 st.sidebar.header("Features' Input")
 st.sidebar.markdown('<h2 style="color: blue;"> Select the values of input variables to predict the target variable</h2>', unsafe_allow_html=True)
 user_input_prediction = {}
