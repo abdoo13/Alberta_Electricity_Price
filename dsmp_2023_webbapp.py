@@ -22,7 +22,7 @@ st.title('Predicting Electricity Prices at the Alberta Region')
 st.markdown('This app allows predicting Electricty prices for the Alberta region considering the "Residential", "Commercial" and the "Industrial" Sectors.')
 
 """ Feature Inputs """
-st.header("Features' Input")
+st.sidebar.header("Features' Input")
 st.sidebar.markdown('<h2 style="color: blue;"> Select the values of input variables to predict the target variable</h2>', unsafe_allow_html=True)
 user_input_prediction = {}
 for column in column_names:
