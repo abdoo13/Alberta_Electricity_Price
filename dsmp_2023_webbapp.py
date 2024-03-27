@@ -9,7 +9,7 @@ Original file is located at
 ## **1 - Importing Libraries & Utilities**
 """
 
-import streamlit as st
+#import streamlit as st
 import pandas as pd
 import numpy as np
 #import joblib
@@ -51,7 +51,6 @@ df['Sector'] = df['Sector'].astype('float')
 # Load the ML Model
 model = joblib.load('lgbm_model.sav')
 model.set_params(n_classes=1)
-#clear_output()
 
 # Predict and display the results
 #prediction = model.predict(temp.values.reshape(1, -1))
