@@ -29,7 +29,7 @@ for sector_ in list_:
 df['Sector'] = df['Sector'].astype('float')
 
 # Load the ML Model
-model = joblib.load('lgbm_model.sav')
+"""model = joblib.load('lgbm_model.sav')"""
 model.set_params(n_classes=1)
 clear_output()
 
