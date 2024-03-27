@@ -30,6 +30,7 @@ df['Sector'] = df['Sector'].astype('float')
 
 # Load the ML Model
 """model = joblib.load('lgbm_model.sav')"""
+model = pickle.load(open('lgbm_model.sav', 'rb'))
 model.set_params(n_classes=1)
 clear_output()
 
