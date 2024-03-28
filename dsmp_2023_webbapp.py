@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+py -m pip install joblib
 import joblib
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 data = pd.read_csv('df_.csv')
