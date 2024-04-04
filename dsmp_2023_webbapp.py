@@ -26,7 +26,7 @@ for sector_ in list_:
   user_input_prediction['Sector'] = list_.index(sector_)
   df = pd.concat([df, pd.DataFrame([user_input_prediction])], axis = 0, ignore_index=True)
 df['Sector'] = df['Sector'].astype('float')
-
+st.text(df)
 # Load the ML Model
 model = joblib.load('rfr_model.sav')
 """model.set_params(n_classes=2)"""
