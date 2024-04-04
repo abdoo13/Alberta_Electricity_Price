@@ -30,7 +30,7 @@ df['Sector'] = df['Sector'].astype('float')
 # Load the ML Model
 model = joblib.load('rfr_model.sav')
 
-model.set_params(n_classes=1)
+#model.set_params(n_classes=2)
 
 # Predict and display the results
 #prediction = model.predict(temp.values.reshape(1, -1))
