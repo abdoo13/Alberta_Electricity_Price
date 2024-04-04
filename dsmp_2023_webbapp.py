@@ -13,7 +13,7 @@ st.sidebar.selectbox(
     "Choose a category?",
     sorted(list(data['Sector'].unique()))
 )
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 user_input_prediction = {}
 for column in column_names:
   if data[column].dtype != 'O':
