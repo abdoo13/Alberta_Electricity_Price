@@ -20,7 +20,6 @@ st.markdown('This app allows predicting Electricty prices for the Alberta region
 
 df = pd.DataFrame()
 list_ = sorted(data['Sector'].unique().tolist())
-st.text(list_)
 #
 for sector_ in list_:
   #print(sector_)
@@ -30,7 +29,6 @@ df['Sector'] = df['Sector'].astype('float')
 
 # Load the ML Model
 model = joblib.load('rfr_model.sav')
-"""model.set_params(n_classes=2)"""
 
 # Predict and display the results
 #prediction = model.predict(temp.values.reshape(1, -1))
