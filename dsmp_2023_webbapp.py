@@ -49,8 +49,8 @@ if st.sidebar.button("Predict Electricity Prices"):
   st.text(np.round(result,2))
 
 # Generate Plot
-df_output = pd.DataFrame(np.round(preds,2))
-df_output.columns = list_
+#df_output = pd.DataFrame(np.round(preds,2))
+#df_output.columns = list_
 #df_output
 #
 #
