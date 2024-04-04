@@ -8,6 +8,10 @@ data = pd.read_csv('df_.csv')
 column_names = list(data.columns)[1:-1]
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 st.sidebar.markdown('<h2 style="color: blue;"> Select the values of input variables to predict the electricity prices</h2>', unsafe_allow_html=True)
+st.sidebar.selectbox(
+    "Choose a category?",
+    sorted(list(data['Sector'].unique()))
+)
 
 user_input_prediction = {}
 for column in column_names:
@@ -18,10 +22,6 @@ st.sidebar.button("Predict Electricity Prices")
 """"""""""""""""""""""""""""""""""""""""""""""""
 st.title('Predicting Electricity Prices in the Alberta Region')
 st.markdown('This app allows predicting Electricty prices for the Alberta region considering the "Residential", "Commercial" and the "Industrial" Sectors.')
-st.sidebar.selectbox(
-    "Choose a category?",
-    ("Email", "Home phone", "Mobile phone")
-)
 df = pd.DataFrame()
 list_ = sorted(data['Sector'].unique().tolist())
 #
