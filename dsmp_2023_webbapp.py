@@ -67,4 +67,4 @@ plt.show()
 st.pyplot(fig)
 """
 
-st.bar_chart(df_output)
+#st.bar_chart(df_output)
