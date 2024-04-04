@@ -18,7 +18,10 @@ st.sidebar.button("Predict Electricity Prices")
 """"""""""""""""""""""""""""""""""""""""""""""""
 st.title('Predicting Electricity Prices in the Alberta Region')
 st.markdown('This app allows predicting Electricty prices for the Alberta region considering the "Residential", "Commercial" and the "Industrial" Sectors.')
-
+st.sidebar.selectbox(
+    "Choose a category?",
+    ("Email", "Home phone", "Mobile phone")
+)
 df = pd.DataFrame()
 list_ = sorted(data['Sector'].unique().tolist())
 #
