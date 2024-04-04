@@ -14,7 +14,7 @@ category = st.sidebar.selectbox(
                               sorted(list(data['Sector'].unique()))
                              )
 labels_ = sorted(list(data['Sector'].unique()))
-st.write('You selected:', lebls_.index(category))
+st.write('You selected:', labels_.index(category))
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 user_input_prediction = {}
 for column in column_names:
