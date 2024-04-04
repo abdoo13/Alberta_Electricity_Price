@@ -7,7 +7,7 @@ data = pd.read_csv('df_.csv')
 # Get column names
 column_names = list(data.columns)[1:-1]
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-st.sidebar.markdown('<h2 style="color: blue;"> Select the GGGG values of input variables to predict the electricity prices</h2>', unsafe_allow_html=True)
+st.sidebar.markdown('<h2 style="color: blue;"> Select the values of input variables to predict the electricity prices</h2>', unsafe_allow_html=True)
 user_input_prediction = {}
 for column in column_names:
   if data[column].dtype != 'O':
@@ -15,7 +15,7 @@ for column in column_names:
 
 st.sidebar.button("Predict Electricity Prices")      
 """"""""""""""""""""""""""""""""""""""""""""""""
-st.title('Predicting Electricity Prices at the Alberta Region')
+st.title('Predicting Electricity Prices at the HHH Alberta Region')
 st.markdown('This app allows predicting Electricty prices for the Alberta region considering the "Residential", "Commercial" and the "Industrial" Sectors.')
 
 df = pd.DataFrame()
