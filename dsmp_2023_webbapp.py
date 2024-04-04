@@ -23,10 +23,7 @@ for column in column_names:
 st.title('Predicting Electricity Prices in the Alberta Region')
 st.markdown('This app allows predicting electricty price for the Alberta region considering "Residential", "Commercial" and "Industrial" Sectors.')
 
-
 # Predict Button
-
-#
 if st.sidebar.button("Predict Electricity Prices"):
   df = pd.DataFrame()
   list_ = sorted(data['Sector'].unique().tolist())
@@ -46,25 +43,4 @@ if st.sidebar.button("Predict Electricity Prices"):
   #Predict and display the results
   st.subheader('Prediction')
   result = model.predict(df.values)
-  st.text(np.round(result,2))
-
-# Generate Plot
-#df_output = pd.DataFrame(np.round(preds,2))
-#df_output.columns = list_
-#df_output
-#
-#
-
-"""
-fig, ax=plt.subplots(figsize=(8,5))
-colors_ = sns.color_palette("deep")
-ax = sns.barplot(df_output, palette=colors_)
-for i in range(len(list_)):
-  ax.bar_label(ax.containers[i], fontsize=10);
-#ax.grid(axis='y')
-plt.ylabel('Electricity Price - (CAD Cents/KWh)')
-plt.show()
-st.pyplot(fig)
-"""
-
-#st.bar_chart(df_output)
+  st.text(np.round(result[0],2))
