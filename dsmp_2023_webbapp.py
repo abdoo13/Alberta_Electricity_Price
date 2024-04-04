@@ -7,6 +7,11 @@ from sklearn.preprocessing import LabelEncoder
 data = pd.read_csv('df_.csv')
 # Get column names
 column_names = list(data.columns)[1:-1]
+le = LabelEncoder()
+temp = le.fit_transform(data['Sector'])
+temp = pd.DataFrame(temp)
+labels_int = list(temp.iloc[:,0].unique())
+st.text(labels_int)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 st.sidebar.markdown('<h2 style="color: blue;"> Select the values of input variables to predict electricity prices</h2>', unsafe_allow_html=True)
 st.sidebar.selectbox(
