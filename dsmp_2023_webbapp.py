@@ -45,7 +45,7 @@ preds = model.predict(df.values)
 st.subheader('Prediction')
 
 # Predict Button
-st.sidebar.button("Predict Electricity Prices")
+
 #
 if st.sidebar.button("Predict Electricity Prices"):
   result = model.predict(df.values)
