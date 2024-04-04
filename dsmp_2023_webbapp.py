@@ -6,7 +6,6 @@ import joblib
 data = pd.read_csv('df_.csv')
 # Get column names
 column_names = list(data.columns)[1:-1]
-st.text(column_names)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 st.sidebar.markdown('<h2 style="color: blue;"> Select the values of input variables to predict the electricity prices</h2>', unsafe_allow_html=True)
 user_input_prediction = {}
@@ -27,6 +26,8 @@ for sector_ in list_:
   user_input_prediction['Sector'] = list_.index(sector_)
   df = pd.concat([df, pd.DataFrame([user_input_prediction])], axis = 0, ignore_index=True)
 df['Sector'] = df['Sector'].astype('float')
+df = df[column_names]
+st.text(df)
 
 # Load the ML Model
 model = joblib.load('rfr_model.sav')
