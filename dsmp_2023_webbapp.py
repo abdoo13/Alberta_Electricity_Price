@@ -44,7 +44,7 @@ model = joblib.load('rfr_model.sav')
 #prediction = model.predict(temp.values.reshape(1, -1))
 preds = model.predict(df.values)
 st.subheader('Prediction')
-st.write(f'The predicted Electricity Price is: {np.round(preds,2)}')
+st.write(f'The predicted Electricity Price is: {np.round(preds[0],2)}')
 
 # Predict Button
 st.button("Predict Electricity Prices")
