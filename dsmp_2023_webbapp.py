@@ -11,7 +11,7 @@ st.sidebar.markdown('<h2 style="color: blue;"> Select the values of input variab
 user_input_prediction = {}
 for column in column_names:
   if data[column].dtype != 'O':
-    user_input_prediction[column] = st.sidebar.slider(f'Select {column}', float(data[column].min()), float(data[column].max()), float(data[column].mean()))
+    user_input_prediction[column] = st.sidebar.slider(f'{column}', float(data[column].min()), float(data[column].max()), float(data[column].mean()))
 
 st.sidebar.button("Predict Electricity Prices")      
 """"""""""""""""""""""""""""""""""""""""""""""""
