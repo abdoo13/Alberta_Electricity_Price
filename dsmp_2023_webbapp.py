@@ -32,6 +32,7 @@ for sector_ in list_:
   #print(sector_)
   user_input_prediction['Sector'] = list_.index(sector_)
   df = pd.concat([df, pd.DataFrame([user_input_prediction])], axis = 0, ignore_index=True)
+df['Sector'] = labels_.index(category)
 df['Sector'] = df['Sector'].astype('float')
 df = df[column_names]
 st.dataframe(df, hide_index=True)
