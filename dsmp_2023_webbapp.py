@@ -8,7 +8,7 @@ data = pd.read_csv('df_.csv')
 column_names = list(data.columns)[1:-1]
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 st.sidebar.markdown('<h2 style="color: blue;"> Select the values of input variables to predict the electricity prices</h2>', unsafe_allow_html=True)
-st.sidebar.selectbox(('Email', 'Home phone', 'Mobile phone'))
+
 user_input_prediction = {}
 for column in column_names:
   if data[column].dtype != 'O':
