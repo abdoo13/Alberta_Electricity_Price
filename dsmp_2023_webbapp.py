@@ -15,7 +15,7 @@ for column in column_names:
 
 st.sidebar.button("Predict Electricity Prices")      
 """"""""""""""""""""""""""""""""""""""""""""""""
-st.title('Predicting Electricity Prices at the KKK Alberta Region')
+st.title('Predicting Electricity Prices in the Alberta Region')
 st.markdown('This app allows predicting Electricty prices for the Alberta region considering the "Residential", "Commercial" and the "Industrial" Sectors.')
 
 df = pd.DataFrame()
