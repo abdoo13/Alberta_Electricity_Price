@@ -47,7 +47,7 @@ st.subheader('Prediction')
 st.write(f'The predicted Electricity Price is: {np.round(preds[0],2)}')
 
 # Predict Button
-st.sidebar.button("Predict Electricity Prices")
+
 #
 if st.sidebar.button("Predict Electricity Prices"):
   result = model.predict(df.values)
