@@ -41,17 +41,15 @@ st.dataframe(df, hide_index=True)
 model = joblib.load('rfr_model.sav')
 
 # Predict and display the results
-#prediction = model.predict(temp.values.reshape(1, -1))
 preds = model.predict(df.values)
 st.subheader('Prediction')
-st.write(f'The predicted Electricity Price is: {np.round(preds[0],2)}')
 
 # Predict Button
-
+st.sidebar.button("Predict Electricity Prices")
 #
 if st.sidebar.button("Predict Electricity Prices"):
   result = model.predict(df.values)
-  st.text(np.round(preds,2))
+  st.text(np.round(result[0],2))
 
 # Generate Plot
 df_output = pd.DataFrame(np.round(preds,2)).T
