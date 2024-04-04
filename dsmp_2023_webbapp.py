@@ -24,7 +24,7 @@ list_ = sorted(data['Sector'].unique().tolist())
 for sector_ in list_:
   #print(sector_)
   user_input_prediction['Sector'] = list_.index(sector_)
-  df = pd.concat([df, pd.DataFrame([user_input_prediction])], axis = 0, ignore_index=True)
+  df = pd.concat([pd.DataFrame([user_input_prediction]), df], axis = 0, ignore_index=True)
 df['Sector'] = df['Sector'].astype('float')
 st.text(df)
 # Load the ML Model
