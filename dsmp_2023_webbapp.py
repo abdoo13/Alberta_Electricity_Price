@@ -46,7 +46,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   #Predict and display the results
   st.subheader('Prediction')
   result = model.predict(df.values)
-  st.text(np.round(result[0],2))
+  st.text(np.round(result,2))
 
 # Generate Plot
 df_output = pd.DataFrame(np.round(preds,2)).T
