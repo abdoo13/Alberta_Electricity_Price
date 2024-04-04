@@ -29,8 +29,7 @@ df['Sector'] = df['Sector'].astype('float')
 
 # Load the ML Model
 model = joblib.load('rfr_model.sav')
-"""model = pickle.load(open('rfr_model.sav', 'rb'))"""
-#model.set_params(n_classes=2)
+"""model.set_params(n_classes=2)"""
 
 # Predict and display the results
 #prediction = model.predict(temp.values.reshape(1, -1))
