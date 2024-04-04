@@ -19,7 +19,7 @@ for column in column_names:
     user_input_prediction[column] = st.sidebar.slider(f'{column}', float(data[column].min()), float(data[column].max()), float(data[column].mean()))
 
 st.sidebar.button("Predict Electricity Prices") 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 st.title('Predicting Electricity Prices in the Alberta Region')
 st.markdown('This app allows predicting electricty price for the Alberta region considering "Residential", "Commercial" and "Industrial" Sectors.')
 df = pd.DataFrame()
@@ -55,7 +55,7 @@ df_output.columns = list_
 #df_output
 #
 #
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """fig, ax=plt.subplots(figsize=(8,5))
 colors_ = sns.color_palette("deep")
 ax = sns.barplot(df_output, palette=colors_)
