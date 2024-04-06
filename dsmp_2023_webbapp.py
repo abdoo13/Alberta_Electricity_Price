@@ -21,7 +21,7 @@ for column in column_names:
     temp = data[data['Sector'] == sector_]
     user_input_prediction[column] = st.sidebar.slider(f'{column}', round(float(temp[column].min()),0), round(float(temp[column].max()),0), float(temp[column].mean()))
   elif data[column].dtype != 'O' and 'GHG' not in column:
-    user_input_prediction[column] = st.sidebar.slider(f'{column}', round(float(data[column].min()),0), round(float(data[column].max()),0), float(data[column].mean()))
+    user_input_prediction[column] = st.sidebar.slider(f'{column}', float(data[column].min()), float(data[column].max()), float(data[column].mean()))
 
 st.title('Predicting Electricity Prices in the Alberta Region')
 st.markdown('This app allows predicting electricty price for the Alberta region considering "Residential", "Commercial" and "Industrial" Sectors.')
