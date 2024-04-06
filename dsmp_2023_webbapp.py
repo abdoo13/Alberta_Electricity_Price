@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-from sklearn.preprocessing import LabelEncoder
+import math
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 data = pd.read_csv('df_.csv')
 # Get column names
@@ -20,9 +20,9 @@ user_input_prediction = {}
 for column in column_names:
   if column == 'Daily End-Use Demand (GWh)':
     temp = data[data['Sector'] == sector_]
-    user_input_prediction[column] = st.sidebar.slider(f'{column}', float(temp[column].min()), float(temp[column].max()), float(temp[column].mean()))
+    user_input_prediction[column] = st.sidebar.slider(f'{column}', math.floor(float(temp[column].min())), math.ceil(float(temp[column].max())), float(temp[column].mean()))
   elif data[column].dtype != 'O' and 'GHG' not in column:
-    user_input_prediction[column] = st.sidebar.slider(f'{column}', float(data[column].min()), float(data[column].max()), float(data[column].mean()))
+    user_input_prediction[column] = st.sidebar.slider(f'{column}', math.floor(float(data[column].min())), math.ceil(float(data[column].max())), float(data[column].mean()))
 
 st.title('Predicting Electricity Prices in the Alberta Region')
 st.markdown('This app allows predicting electricty price for the Alberta region considering "Residential", "Commercial" and "Industrial" Sectors.')
