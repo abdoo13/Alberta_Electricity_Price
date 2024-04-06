@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder
 data = pd.read_csv('df_.csv')
 # Get column names
 column_names = list(data.columns)[1:-1]
-column_names.remove(Sources)
+column_names.remove('Sources')
 st.text(column_names)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 st.sidebar.markdown('<h2 style="color: blue;"> Select the values of input variables to predict electricity prices</h2>', unsafe_allow_html=True)
