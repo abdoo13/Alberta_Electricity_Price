@@ -15,7 +15,6 @@ sector_ = st.sidebar.selectbox(
                              "Sector",
                               sorted(list(data['Sector'].unique()))
                              )
-Fun_Sector_EnergyUse(sector_)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 user_input_prediction = {}
 for column in column_names:
