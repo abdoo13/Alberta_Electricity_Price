@@ -44,4 +44,4 @@ if st.sidebar.button("Predict Electricity Prices"):
   #Predict and display the results
   st.subheader('Prediction')
   result = model.predict(df.values)
-  st.text(np.round(result[0],2) + "(CAD Cents/KWh)")
+  st.text(np.round(result[0],2))
