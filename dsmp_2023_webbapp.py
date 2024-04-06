@@ -31,7 +31,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   #
   df = pd.concat([pd.DataFrame([user_input_prediction]), pd.DataFrame([user_input_prediction])], axis=0)
   df['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df['Daily End-Use Demand (GWh)']*0.4688
-  df = df[column_names[1:]]
+  #df = df[column_names[1:]]
   st.dataframe(df, hide_index=True)
 
   #Load the ML Model
