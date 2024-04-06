@@ -24,3 +24,20 @@ for column in column_names:
 
 st.title('Predicting Electricity Prices in the Alberta Region')
 st.markdown('This app allows predicting electricty price for the Alberta region considering "Residential", "Commercial" and "Industrial" Sectors.')
+
+# Predict Button
+if st.sidebar.button("Predict Electricity Prices"):
+  df = pd.DataFrame()
+  list_ = sorted(data['Sector'].unique().tolist())
+  #
+  df = pd.DataFrame([user_input_prediction])
+  df = df[column_names]
+  st.dataframe(df, hide_index=True)
+
+  #Load the ML Model
+  model = joblib.load('rfr_model.sav')
+
+  #Predict and display the results
+  st.subheader('Prediction')
+  #result = model.predict(df.values)
+  #st.text(np.round(result[0],2))
