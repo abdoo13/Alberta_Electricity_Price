@@ -15,7 +15,10 @@ sector_ = st.sidebar.selectbox(
                              "Sector",
                               sorted(list(data['Sector'].unique()))
                              )
-
+source_ = st.sidebar.selectbox(
+                             "Energy Source",
+                              sorted(['Fossil Fules', 'Renewables'])
+                             )
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 user_input_prediction = {}
 for column in column_names:
