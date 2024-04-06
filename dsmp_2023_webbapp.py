@@ -15,7 +15,7 @@ sector_ = st.sidebar.selectbox(
                              "Sector",
                               sorted(list(data['Sector'].unique()))
                              )
-sectors = sorted(list(data['Sector'].unique()))
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 user_input_prediction = {}
 for column in column_names:
