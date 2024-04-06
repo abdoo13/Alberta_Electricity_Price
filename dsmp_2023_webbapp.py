@@ -45,3 +45,5 @@ if st.sidebar.button("Predict Electricity Prices"):
   st.subheader('Prediction')
   result = model.predict(df.values)
   st.text(np.round(result[0],2))
+
+  #summary_plot(shap_values, datast.iloc[:,3:], feature_names = list(df.columns))
