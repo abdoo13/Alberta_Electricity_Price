@@ -51,7 +51,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   #shap_values = explainer.shap_values(data.iloc[:,3:-1])
   #summary_plot(shap_values, data.iloc[:,3:]-1, feature_names = list(df.columns))
 
-  from shap import Explainer, plots
-  explainer_ = Explainer(model)
-  shap_values_ = explainer(data.iloc[:,3:])
-  plots.waterfall(shap_values_[13])
+  #from shap import Explainer, plots
+  #explainer_ = Explainer(model)
+  #shap_values_ = explainer(data.iloc[:,3:])
+  #plots.waterfall(shap_values_[13])
