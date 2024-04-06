@@ -15,10 +15,6 @@ sector_ = st.sidebar.selectbox(
                              "Sector",
                               sorted(list(data['Sector'].unique()))
                              )
-source_ = st.sidebar.selectbox(
-                             "Energy Source",
-                              sorted(['Fossil Fules', 'Renewables'])
-                             )
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 user_input_prediction = {}
 for column in column_names:
@@ -34,10 +30,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   #
   df = pd.concat([pd.DataFrame([user_input_prediction]), pd.DataFrame([user_input_prediction])], axis=0)
   #
-  if source_ == 'Fossil Fules':
-    df['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df['Daily End-Use Demand (GWh)']*0.4688
-  else:
-    df['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = 0
+  df['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df['Daily End-Use Demand (GWh)']*0.4688
   #
   df = df[column_names[1:]]
   st.dataframe(df, hide_index=True)
