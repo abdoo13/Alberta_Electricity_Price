@@ -11,8 +11,8 @@ column_names.remove('Sources')
 st.text(column_names)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 st.sidebar.markdown('<h2 style="color: blue;"> Select the values of input variables to predict electricity prices</h2>', unsafe_allow_html=True)
-category = st.sidebar.selectbox(
-                             "Choose a category?",
+sector_ = st.sidebar.selectbox(
+                             "Sector",
                               sorted(list(data['Sector'].unique()))
                              )
 sectors = sorted(list(data['Sector'].unique()))
