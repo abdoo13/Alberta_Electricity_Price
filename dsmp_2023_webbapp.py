@@ -46,4 +46,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   result = model.predict(df.values)
   st.text(np.round(result[0],2))
 
-  summary_plot(shap_values, data.iloc[:,3:], feature_names = list(df.columns))
+  from shap import TreeExplainer, summary_plot
+  explainer = TreeExplainer(model)
+  shap_values = explainer.shap_values(data.iloc[:,3:-1])
+  summary_plot(shap_values, data.iloc[:,3:]-1, feature_names = list(df.columns))
