@@ -19,7 +19,7 @@ sectors = sorted(list(data['Sector'].unique()))
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 user_input_prediction = {}
 for column in column_names:
-  if 'GHG' not in column:
+  if data[column].dtype != 'O' and 'GHG' not in column:
     user_input_prediction[column] = st.sidebar.slider(f'{column}', float(data[column].min()), float(data[column].max()), float(data[column].mean()))
 
 st.title('Predicting Electricity Prices in the Alberta Region')
