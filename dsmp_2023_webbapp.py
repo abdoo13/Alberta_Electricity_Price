@@ -13,7 +13,8 @@ category = st.sidebar.selectbox(
                              "Choose a category?",
                               sorted(list(data['Sector'].unique()))
                              )
-labels_ = sorted(list(data['Sector'].unique()))
+sectors = sorted(list(data['Sector'].unique()))
+st.text(sectors)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 user_input_prediction = {}
 for column in column_names:
