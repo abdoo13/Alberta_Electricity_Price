@@ -18,7 +18,7 @@ category = st.sidebar.selectbox(
 sectors = sorted(list(data['Sector'].unique()))
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 user_input_prediction = {}
-for column in column_names[1,:]:
+for column in column_names:
   if data[column].dtype != 'O':
     user_input_prediction[column] = st.sidebar.slider(f'{column}', float(data[column].min()), float(data[column].max()), float(data[column].mean()))
 
