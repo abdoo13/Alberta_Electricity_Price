@@ -19,7 +19,7 @@ sector_ = st.sidebar.selectbox(
 user_input_prediction = {}
 for column in column_names:
   if column == 'Daily End-Use Demand (GWh)':
-    temp = data[data['Sector] == "Residential"]
+    temp = data[data['Sector'] == "Residential"]
     user_input_prediction[column] = st.sidebar.slider(f'{column}', float(temp[column].min()), float(temp[column].max()), float(temp[column].mean()))
   elif data[column].dtype != 'O' and 'GHG' not in column:
     user_input_prediction[column] = st.sidebar.slider(f'{column}', float(data[column].min()), float(data[column].max()), float(data[column].mean()))
