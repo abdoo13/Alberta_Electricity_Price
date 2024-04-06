@@ -29,7 +29,7 @@ st.markdown('This app allows predicting electricty price for the Alberta region 
 if st.sidebar.button("Predict Electricity Prices"):
   df = pd.DataFrame()
   #
-  df = pd.concat([pd.DataFrame([user_input_prediction]), pd.DataFrame([user_input_prediction])}
+  df = pd.concat([pd.DataFrame([user_input_prediction]), pd.DataFrame([user_input_prediction])], axis=0)
   #df = df[column_names]
   st.dataframe(df, hide_index=True)
 
