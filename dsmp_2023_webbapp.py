@@ -28,10 +28,9 @@ st.markdown('This app allows predicting electricty price for the Alberta region 
 # Predict Button
 if st.sidebar.button("Predict Electricity Prices"):
   df = pd.DataFrame()
-  list_ = sorted(data['Sector'].unique().tolist())
   #
   df = pd.DataFrame([user_input_prediction])
-  df = df[column_names]
+  #df = df[column_names]
   st.dataframe(df, hide_index=True)
 
   #Load the ML Model
