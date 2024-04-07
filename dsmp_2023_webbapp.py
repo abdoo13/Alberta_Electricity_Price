@@ -26,7 +26,7 @@ for column in column_names:
 
 st.title('Predicting Electricity Prices in the Alberta Region')
 st.markdown('This webb application allows predicting electricty prices in the Alberta region for the following sectors: "Residential", "Commercial" and "Industrial".')
-
+st.text(user_input_prediction)
 # Predict Button
 if st.sidebar.button("Predict Electricity Prices"):
   df = pd.DataFrame()
