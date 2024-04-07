@@ -23,7 +23,11 @@ for column in column_names:
     user_input_prediction[column] = st.sidebar.slider(f'{column}', round(float(temp[column].min()),0), round(float(temp[column].max()),0), float(temp[column].mean()))
   elif data[column].dtype != 'O' and 'GHG' not in column:
     user_input_prediction[column] = st.sidebar.slider(f'{column}', round(float(data[column].min()),0), round(float(data[column].max()),0), float(data[column].mean()))
-
+del temp
+temp = pd.DataFrame(user_input_prediction)
+df = pd.DataFrame(np.repeat(temp.values, 3, axis=0))
+st.dataframe(df)
+ss
 st.title('Predicting Electricity Prices in the Alberta Region')
 st.markdown('This webb application allows predicting electricty prices in the Alberta region for the following sectors: "Residential", "Commercial" and "Industrial".')
 st.text(user_input_prediction)
