@@ -29,31 +29,6 @@ st.markdown('This webb application allows predicting electricty prices in the Al
 
 # Predict Button
 if st.sidebar.button("Predict Electricity Prices"):
-  df = pd.DataFrame()
-  #
-  df = pd.concat([pd.DataFrame([user_input_prediction]), pd.DataFrame([user_input_prediction])], axis=0)
-  #
-  df['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df['Daily End-Use Demand (GWh)']*0.4688
-  #
-  df = df[column_names[1:]]
-  st.dataframe(df, hide_index=True)
-
-  #Load the ML Model
-  model = joblib.load('rfr_model.sav')
-
-  #Predict and display the results
-  st.subheader('Prediction')
-  result = model.predict(df.values)
-  st.text(np.round(result[0],2))
-
-  #from shap import TreeExplainer, summary_plot
-  #explainer = TreeExplainer(model)
-  #shap_values = explainer.shap_values(data.iloc[:,3:-1])
-  #summary_plot(shap_values, data.iloc[:,3:]-1, feature_names = list(df.columns))
-
-  #from shap import Explainer, plots
-  #explainer_ = Explainer(model)
-  #shap_values_ = explainer(data.iloc[:,3:])
-  #plots.waterfall(shap_values_[13])
-
-  
+  for key in user_input_prediction:
+    list_.append(key)
+  st.text(list_)
