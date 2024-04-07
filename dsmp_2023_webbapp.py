@@ -29,8 +29,10 @@ st.markdown('This webb application allows predicting electricty prices in the Al
 
 # Predict Button
 if st.sidebar.button("Predict Electricity Prices"):
-  list_ = []
+  df = pd.DataFrame()
+  cols_ = []
   for key_ in user_input_prediction.keys():
-    list_.append(key_)
+    cols_.append(key_)
+    df[key_] = [user_input_prediction[key_]]
   st.text(list_)
 
