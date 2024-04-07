@@ -28,3 +28,10 @@ temp = pd.DataFrame(user_input_prediction)
 df = pd.DataFrame(np.repeat(temp.values, 3, axis=0))
 st.dataframe(df)
 
+st.title('Predicting Electricity Prices in the Alberta Region')
+st.markdown('This webb application allows predicting electricty prices in the Alberta region for the following sectors: "Residential", "Commercial" and "Industrial".')
+
+# Predict Button
+if st.sidebar.button("Predict Electricity Prices"):
+  st.text(user_input_prediction)
+  
