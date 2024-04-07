@@ -34,5 +34,6 @@ if st.sidebar.button("Predict Electricity Prices"):
   for key_ in user_input_prediction.keys():
     cols_.append(key_)
     df[key_] = [user_input_prediction[key_]]
-  st.text(list_)
+  st.text(cols_)
+  st.dataframe(df)
 
