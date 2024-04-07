@@ -38,4 +38,7 @@ if st.sidebar.button("Predict Electricity Prices"):
     else:
       df[key_] = [user_input_prediction[key_]]*3
   st.text(cols_)
-  st.dataframe(df)
+  df['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df['Daily End-Use Demand (GWh)']*0.4688
+  #
+  df = df[column_names[1:]]
+  st.dataframe(df, hide_index=True)
