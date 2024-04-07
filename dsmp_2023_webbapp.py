@@ -34,10 +34,8 @@ if st.sidebar.button("Predict Electricity Prices"):
   for key_ in user_input_prediction.keys():
     cols_.append(key_)
     if key_ == 'Daily End-Use Demand (GWh)':
-      df[key_] = [round(float(temp['Daily End-Use Demand (GWh)'].min())), round(float(temp['Daily End-Use Demand (GWh)'].mean())), round(float(temp['Daily End-Use Demand (GWh)'].max()))]
+      df[key_] = [round(float(temp['Daily End-Use Demand (GWh)'].min())), user_input_prediction[key_], round(float(temp['Daily End-Use Demand (GWh)'].max()))]
     else:
       df[key_] = [user_input_prediction[key_]]*3
   st.text(cols_)
   st.dataframe(df)
-  st.text(round(float(temp['Daily End-Use Demand (GWh)'].min())))
-
