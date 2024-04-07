@@ -42,3 +42,11 @@ if st.sidebar.button("Predict Electricity Prices"):
   #
   df = df[column_names[1:]]
   st.dataframe(df, hide_index=True)
+
+  #Load the ML Model
+  model = joblib.load('rfr_model.sav')
+
+  #Predict and display the results
+  st.subheader('Prediction')
+  result = model.predict(df.values)
+  st.text(np.round(result,2))
