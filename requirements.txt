@@ -5,3 +5,4 @@ joblib
 xgboost
 altair
 seaborn
+matplotlib.pyplot
