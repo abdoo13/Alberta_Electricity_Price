@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import joblib
 import altair as alt
-import seaborn as sns
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 data = pd.read_csv('df_.csv')
 # Get column names
