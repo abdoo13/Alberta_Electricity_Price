@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 import altair as alt
+import seaborn as sns
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 data = pd.read_csv('df_.csv')
 # Get column names
@@ -62,4 +63,6 @@ if st.sidebar.button("Predict Electricity Prices"):
          ).properties( width = 300, height = 300, ).configure_header(labelOrient='bottom').configure_view(
          strokeOpacity=0)
 
-  st.altair_chart(chart_) #, use_container_width=True)
+  #st.altair_chart(chart_) #, use_container_width=True)
+  sns.barplot(x="Job Stat", y="Value", hue="Category", data=df_revised)
+  st.pyplot(data=df_2, x='Cat', y=['Daily End-Use Demand', 'Electricity Price'])
