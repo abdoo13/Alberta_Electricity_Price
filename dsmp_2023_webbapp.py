@@ -64,5 +64,5 @@ if st.sidebar.button("Predict Electricity Prices"):
          strokeOpacity=0)
 
   #st.altair_chart(chart_) #, use_container_width=True)
-  sns.barplot(x="Job Stat", y="Value", hue="Category", data=df_revised)
-  st.pyplot(data=df_2, x='Cat', y=['Daily End-Use Demand', 'Electricity Price'])
+  sns.barplot(data=df_2, x='Cat', y=['Daily End-Use Demand', 'Electricity Price'])
+  st.pyplot()
