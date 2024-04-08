@@ -48,5 +48,5 @@ if st.sidebar.button("Predict Electricity Prices"):
   st.subheader('Prediction')
   result = model.predict(df.values)
   #st.text(np.round(result,2))
-  df_2 = pd.DataFframe({'Cat':['Low', 'Price', 'Top']})
+  df_2 = pd.DataFrame({'Cat':['Low', 'Price', 'Top'], 'Price':np.round(result,2)})
   st.dataframe(df_2)
