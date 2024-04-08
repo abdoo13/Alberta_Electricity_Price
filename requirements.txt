@@ -4,5 +4,3 @@ scikit-learn==1.2.2
 joblib
 xgboost
 altair
-seaborn
-matplotlib.pyplot
