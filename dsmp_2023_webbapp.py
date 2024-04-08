@@ -50,16 +50,4 @@ if st.sidebar.button("Predict Electricity Prices"):
   #st.text(np.round(result,2))
   df_2 = pd.DataFrame({'Cat':['Low', 'Price', 'Top'], 'Daily End-Use Demand':df['Daily End-Use Demand (GWh)'], 'Electricity Price':np.round(result,2)})
   st.dataframe(df_2)
-  #st.bar_chart(df_2, x='Cat', y=['Daily End-Use Demand', 'Electricity Price'])
-  #transform dataframe 
-  source_=pd.melt(df_2, id_vars=['Cat'])
-
-  chart_=alt.Chart(source_).mark_bar(strokeWidth=100).encode(
-         x=alt.X('variable:N', title="", scale=alt.Scale(paddingOuter=0.5)),#paddingOuter - you can play with a space between 2 models 
-         y='value:Q',
-         color='variable:N',
-         column=alt.Column('model:N', title="", spacing =0), #spacing =0 removes space between columns, column for can and st 
-         ).properties( width = 300, height = 300, ).configure_header(labelOrient='bottom').configure_view(
-         strokeOpacity=0)
-
-  st.altair_chart(chart_) #, use_container_width=True)
+  st.bar_chart(df_2, x='Cat', y=['Daily End-Use Demand', 'Electricity Price'])
