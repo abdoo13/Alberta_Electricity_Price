@@ -39,7 +39,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   df['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df['Daily End-Use Demand (GWh)']*0.4688
   #
   df = df[column_names[1:]]
-  st.dataframe(df, hide_index=True)
+  #st.dataframe(df, hide_index=True)
 
   #Load the ML Model
   model = joblib.load('rfr_model.sav')
@@ -50,4 +50,4 @@ if st.sidebar.button("Predict Electricity Prices"):
   #st.text(np.round(result,2))
   df_2 = pd.DataFrame({'Cat':['Low', 'Price', 'Top'], 'Daily End-Use Demand':df['Daily End-Use Demand (GWh)'], 'Electricity Price':np.round(result,2)})
   st.dataframe(df_2)
-  st.bar_chart(df_2, x=['Daily End-Use Demand', 'Cat'], y='Electricity Price')
+  st.bar_chart(df_2, x='Cat', y=['Daily End-Use Demand', 'Electricity Price'])
