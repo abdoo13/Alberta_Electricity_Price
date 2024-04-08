@@ -50,4 +50,4 @@ if st.sidebar.button("Predict Electricity Prices"):
   #st.text(np.round(result,2))
   df_2 = pd.DataFrame({'Cat':['Low', 'Price', 'Top'], 'Price':np.round(result,2)})
   st.dataframe(df_2)
-  st.barplot(df_2)
+  st.bar_chart(df_2)
