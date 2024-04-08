@@ -8,7 +8,6 @@ data = pd.read_csv('df_.csv')
 # Get column names
 column_names = list(data.columns)[1:-1]
 column_names.remove('Sources')
-#st.text(column_names)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 st.sidebar.markdown('<h2 style="color: blue;"> Select the values of input variables to predict electricity prices</h2>', unsafe_allow_html=True)
 sector_ = st.sidebar.selectbox(
@@ -37,7 +36,6 @@ if st.sidebar.button("Predict Electricity Prices"):
       df[key_] = [round(float(temp['Daily End-Use Demand (GWh)'].min())), user_input_prediction[key_], round(float(temp['Daily End-Use Demand (GWh)'].max()))]
     else:
       df[key_] = [user_input_prediction[key_]]*3
-  st.text(cols_)
   df['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df['Daily End-Use Demand (GWh)']*0.4688
   #
   df = df[column_names[1:]]
