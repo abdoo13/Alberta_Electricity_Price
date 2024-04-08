@@ -63,8 +63,4 @@ if st.sidebar.button("Predict Electricity Prices"):
          ).properties( width = 300, height = 300, ).configure_header(labelOrient='bottom').configure_view(
          strokeOpacity=0)
 
-  #st.altair_chart(chart_) #, use_container_width=True)
-  import matplotlib.pyplot as plt
-  fig, ax = plt.subplots()
-  ax = sns.barplot(data=df_2, x='Cat', y='Daily End-Use Demand')
-  st.pyplot(fig)
+  st.altair_chart(chart_) #, use_container_width=True)
