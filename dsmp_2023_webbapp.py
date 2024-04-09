@@ -72,5 +72,5 @@ if st.sidebar.button("Predict Electricity Prices"):
                                                                                       np.round(df_3['Electricity Price (CAD Cents/KWh'].max(), 1)+0.2]))
                                         )
       #+alt.Chart(pd.DataFrame({'y': [12.3]})).mark_rule().encode(y='y'))
-       text = alt.Chart(annotations).mark_text().encode(x='date:Q', y='count:N', text='note:N'))
+       + alt.Chart(annotations).mark_text().encode(x='date:Q', y='count:N', text='note:N'))
   st.altair_chart(c, use_container_width=True)
