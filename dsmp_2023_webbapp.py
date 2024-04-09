@@ -64,6 +64,6 @@ if st.sidebar.button("Predict Electricity Prices"):
 
   c = (alt.Chart(df_3).mark_line().encode(
                                         x = alt.X(cols_3[0]),
-                                        y = alt.Y(cols_3[-1], scale=alt.Scale(domain=[10, 20]))
+                                        y = alt.Y(cols_3[-1], scale=alt.Scale(domain=[14, 16]))
                                         ))
   st.altair_chart(c)
