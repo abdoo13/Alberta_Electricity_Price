@@ -56,5 +56,5 @@ if st.sidebar.button("Predict Electricity Prices"):
   df_3 = pd.DataFrame(columns=column_names[1:])
   
   tt = pd.DataFrame()
-  tt['eeee'] = [x for x in range(14)]
+  tt['eeee'] = [x for x in range(1,14,2)]
   st.dataframe(tt)
