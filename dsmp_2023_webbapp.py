@@ -59,5 +59,5 @@ if st.sidebar.button("Predict Electricity Prices"):
   for col in list(df_3.columns)[2:]:
     df_3[col] = df[col][0]
   df_3['Electricity Price (CAD Cents/KWh'] = model.predict(df_3.values)
-  #st.dataframe(df_3)
-  st.line_chart(df_3, x="Daily End-Use Demand (GWh)", y="Electricity Price (CAD Cents/KWh)")
+  st.dataframe(df_3)
+  #st.line_chart(df_3, x="Daily End-Use Demand (GWh)", y="Electricity Price (CAD Cents/KWh)")
