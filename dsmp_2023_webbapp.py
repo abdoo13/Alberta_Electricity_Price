@@ -60,9 +60,9 @@ if st.sidebar.button("Predict Electricity Prices"):
     df_3[col] = df[col][0]
   df_3['Electricity Price (CAD Cents/KWh'] = model.predict(df_3.values)
   cols_3 = list(df_3.columns)
-  st.line_chart(df_3, x=cols_3[0], y=cols_3[-1])
+  #st.line_chart(df_3, x=cols_3[0], y=cols_3[-1])
 
-  altair.Chart(my_data_frame).mark_line().encode(
-    x = alt.X('my_column_name')
-    y = alt.Y('my_y_col_name', scale=alt.Scale(domain=[0, 50]))
-)
+  altair.Chart(df_3).mark_line().encode(
+                                        x = alt.X(cols_3[0])
+                                        y = alt.Y(cols_3[-1], scale=alt.Scale(domain=[10, 20]))
+                                        )
