@@ -54,6 +54,6 @@ if st.sidebar.button("Predict Electricity Prices"):
   
   delta_ = df_2['Daily End-Use Demand'][2] - df_2['Daily End-Use Demand'][0]
   df_3 = pd.DataFrame(columns=column_names[1:])
-    
-  df_3['eeee'] = [j*delta_ for j in range(0, 11)]
+  df_3['Daily End-Use Demand (GWh)'] = [df['Daily End-Use Demand (GWh)'][0] + j*delta_ for j in range(0, 11)]
+  df_3['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df_3['Daily End-Use Demand (GWh)']*0.4688
   st.dataframe(df_3)
