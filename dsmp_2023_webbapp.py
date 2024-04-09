@@ -51,9 +51,10 @@ if st.sidebar.button("Predict Electricity Prices"):
   df_2 = pd.DataFrame({'Cat':['Low', 'Price', 'Top'], 'Daily End-Use Demand':df['Daily End-Use Demand (GWh)'], 'Electricity Price':np.round(result,2)})
   st.dataframe(df_2)
   st.bar_chart(df_2, x='Cat', y=['Daily End-Use Demand', 'Electricity Price'])
+  
   delta_ = df_2['Daily End-Use Demand'][2] - df_2['Daily End-Use Demand'][0]
-  x_ = []
-  y_ = []
-  #for j in range(0, delta_, delta_/10):
-    #x.append(df_2['Daily End-Use Demand'][0]+j)
-    #to_pred = 0
+  df_3 = pd.DataFrame(columns=column_names[1:])
+  for j in range(0, delta_, delta_/10):
+    df_3['Daily End-Use Demand (GWh)'][j] = df['Daily End-Use Demand (GWh)'][0] + j*delta_
+    df_3['Daily GHG Emmisions (Tons_CO2_Equivalent)'][j] = df_3['Daily End-Use Demand (GWh)'][j]*0.4688
+  st.dataframe(df_3)
