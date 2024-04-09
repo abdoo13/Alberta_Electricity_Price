@@ -56,5 +56,5 @@ if st.sidebar.button("Predict Electricity Prices"):
   df_3 = pd.DataFrame(columns=column_names[1:])
   
   tt = pd.DataFrame()
-  tt['eeee'] = [df['Daily End-Use Demand (GWh)'][0] + j*delta_ for j in range(0, delta_, delta_/10)]
+  tt['eeee'] = [x for j in range(0, delta_, delta_/10)]
   st.dataframe(tt)
