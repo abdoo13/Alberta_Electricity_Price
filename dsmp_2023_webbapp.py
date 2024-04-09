@@ -62,7 +62,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   df_3['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df_3['Daily End-Use Demand (GWh)']*0.4688
   for col in list(df_3.columns)[2:]:
     df_3[col] = df[col][0]
-  df_3['Electricity Price (CAD Cents/KWh)'] = model.predict(df_3.values)
+  df_3['ff'] = model.predict(df_3.values) #cols_3[-1]
   #st.dataframe(df_3)
   cols_3 = list(df_3.columns)
   #st.line_chart(df_3, x=cols_3[0], y=cols_3[-1])
