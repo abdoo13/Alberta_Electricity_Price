@@ -26,7 +26,7 @@ for column in column_names:
     user_input_prediction[column] = st.sidebar.slider(f'{column}', round(float(data[column].min()),0), round(float(data[column].max()),0), float(data[column].mean()))
 
 st.title('Predicting Electricity Prices in the Alberta Region')
-st.markdown('This webb application allows predicting electricty prices in the Alberta region for the following sectors: "Residential", "Commercial" and "Industrial".')
+st.markdown('This web application allows predicting electricty prices in the Alberta region for the following sectors: "Residential", "Commercial" and "Industrial".')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # Predict Button
 if st.sidebar.button("Predict Electricity Prices"):
