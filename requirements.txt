@@ -4,4 +4,3 @@ scikit-learn==1.2.2
 joblib
 altair
 plotly
-pip install matplotlib
