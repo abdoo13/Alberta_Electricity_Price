@@ -63,6 +63,6 @@ if st.sidebar.button("Predict Electricity Prices"):
   #st.line_chart(df_3, x=cols_3[0], y=cols_3[-1])
 
   altair.Chart(df_3).mark_line().encode(
-                                        x = alt.X(cols_3[0])
+                                        x = alt.X(cols_3[0]),
                                         y = alt.Y(cols_3[-1], scale=alt.Scale(domain=[10, 20]))
                                         )
