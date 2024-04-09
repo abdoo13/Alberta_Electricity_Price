@@ -64,7 +64,7 @@ if st.sidebar.button("Predict Electricity Prices"):
                {'range': [0, 250], 'color': "lightgray"},
                {'range': [250, 400], 'color': "gray"}],
              'threshold' : {'line': {'color': "red", 'width': 4}, 'thickness': 0.75, 'value': 490}}))
-  st.pyplot(fig)
+  plt.show(fig)
   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   delta_ = df_2['Daily End-Use Demand'][2] - df_2['Daily End-Use Demand'][0]
   df_3 = pd.DataFrame(columns=column_names[1:])
