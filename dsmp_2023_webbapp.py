@@ -55,5 +55,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   delta_ = df_2['Daily End-Use Demand'][2] - df_2['Daily End-Use Demand'][0]
   df_3 = pd.DataFrame(columns=column_names[1:])
   
+  tt = pd.DataFrame()
   for i in range(0, 10, 2):
-    print(i)
+    tt['eeee'] = i
+  st.dataframe(tt)
