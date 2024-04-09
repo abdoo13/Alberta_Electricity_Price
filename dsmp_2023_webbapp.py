@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 import altair as alt
+import plotly.graph_objects as go
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 data = pd.read_csv('df_.csv')
 # Get column names
@@ -51,6 +52,18 @@ if st.sidebar.button("Predict Electricity Prices"):
   df_2 = pd.DataFrame({'Cat':['Low', 'Price', 'Top'], 'Daily End-Use Demand':df['Daily End-Use Demand (GWh)'], 'Electricity Price':np.round(result,2)})
   st.dataframe(df_2)
   #st.bar_chart(df_2, x='Cat', y=['Daily End-Use Demand', 'Electricity Price'])
+  fig = go.Figure(go.Indicator(
+    domain = {'x': [0, 1], 'y': [0, 1]},
+    value = 450,
+    mode = "gauge+number+delta",
+    title = {'text': "Speed"},
+    delta = {'reference': 380},
+    gauge = {'axis': {'range': [None, 500]},
+             'steps' : [
+               {'range': [0, 250], 'color': "lightgray"},
+               {'range': [250, 400], 'color': "gray"}],
+             'threshold' : {'line': {'color': "red", 'width': 4}, 'thickness': 0.75, 'value': 490}}))
+  fig.show()
   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   delta_ = df_2['Daily End-Use Demand'][2] - df_2['Daily End-Use Demand'][0]
   df_3 = pd.DataFrame(columns=column_names[1:])
