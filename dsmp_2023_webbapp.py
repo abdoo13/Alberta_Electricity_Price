@@ -77,7 +77,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   fig = go.Figure(go.Indicator(
     mode = "gauge+number",
     #value = np.round(result[1],2),
-    value = np.min(result),
+    value = result.min(),
     title = {'text': "Electricity Price (CAD Cents/KWh)"},
     domain = {'x': [0, 1], 'y': [0, 1]},
     gauge = {'axis': {'range': [10, 20]}}
