@@ -5,3 +5,4 @@ joblib
 altair
 plotly
 matplotlib
+plotly
