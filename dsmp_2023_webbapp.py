@@ -94,6 +94,6 @@ if st.sidebar.button("Predict Electricity Prices"):
   with data_container:
     plot1, plot2 = st.columns(2)
     with plot1:
-        st.plotly_chart(fig1, use_container_width=True)
+        st.plotly_chart(fig1)
     with plot2:
-        st.plotly_chart(fig2, use_container_width=True)
+        st.plotly_chart(fig2)
