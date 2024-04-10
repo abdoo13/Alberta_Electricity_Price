@@ -76,7 +76,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   st.altair_chart(c, use_container_width=True)
   fig = go.Figure(go.Indicator(
     mode = "gauge+number",
-    value = st.text(np.round(result[2],2)),
+    value = np.round(result[2],2),
     title = {'text': "Electricity Price (CAD Cents/KWh)"},
     domain = {'x': [0, 1], 'y': [0, 1]},
     gauge = {'axis': {'range': [10, 20]}}
