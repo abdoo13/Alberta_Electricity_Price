@@ -75,11 +75,25 @@ if st.sidebar.button("Predict Electricity Prices"):
       +alt.Chart(pd.DataFrame({'y': [12.3]})).mark_rule().encode(y='y'))
   st.altair_chart(c, use_container_width=True)
   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-  fig = go.Figure(go.Indicator(
+  fig1 = go.Figure(go.Indicator(
+    mode = "gauge+number",
+    value = np.round(result[1],2),
+    title = {'text': "'Daily End-Use Demand (GWh)'"},
+    domain = {'x': [0, 1], 'y': [0, 1]},
+    gauge = {'axis': {'range': [np.round(result.min(),0), np.round(result.max(),0)]}}
+  ))
+  fig2 = go.Figure(go.Indicator(
     mode = "gauge+number",
     value = np.round(result[1],2),
     title = {'text': "Electricity Price (CAD Cents/KWh)"},
     domain = {'x': [0, 1], 'y': [0, 1]},
     gauge = {'axis': {'range': [np.round(result.min(),0), np.round(result.max(),0)]}}
   ))
-  st.plotly_chart(fig, use_container_width=True)
+  #st.plotly_chart(fig1, use_container_width=True)
+  data_container = st.container()
+  with data_container:
+    plot1, plot2 = st.columns(2)
+    with plot1:
+        st.plotly_chart(fig1, use_container_width=True)
+    with plot2:
+        st.plotly_chart(fig2, use_container_width=True)
