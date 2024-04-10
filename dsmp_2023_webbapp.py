@@ -74,6 +74,7 @@ if st.sidebar.button("Predict Electricity Prices"):
                                         )
       +alt.Chart(pd.DataFrame({'y': [12.3]})).mark_rule().encode(y='y'))
   st.altair_chart(c, use_container_width=True)
+  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   fig = go.Figure(go.Indicator(
     mode = "gauge+number",
     value = np.round(result[1],2),
