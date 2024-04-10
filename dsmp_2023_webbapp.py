@@ -74,3 +74,12 @@ if st.sidebar.button("Predict Electricity Prices"):
                                         )
       +alt.Chart(pd.DataFrame({'y': [12.3]})).mark_rule().encode(y='y'))
   st.altair_chart(c, use_container_width=True)
+  fig = go.Figure(go.Indicator(
+    mode = "gauge+number",
+    value = 17.5,
+    title = {'text': "Electricity Price (CAD Cents/KWh)"},
+    domain = {'x': [0, 1], 'y': [0, 1]},
+    gauge = {'axis': {'range': [10, 20]}}
+  ))
+
+  fig.show()
