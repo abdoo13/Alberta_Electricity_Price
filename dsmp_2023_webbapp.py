@@ -16,13 +16,6 @@ sector_ = st.sidebar.selectbox(
                              "Sector",
                               sorted(list(data['Sector'].unique()))
                              )
-col = f''' <style> div.stSlider > div[data-baseweb = "slider"] > div > div {{
-    background: linear-gradient(to right, rgb(1, 183, 158) 0%, 
-                                rgb(1, 183, 158) {NB}%, 
-                                rgba(151, 166, 195, 0.25) {NB}%, 
-                                rgba(151, 166, 195, 0.25) 100%); }} </style>'''
-
-ColorSlider = st.markdown(col, unsafe_allow_html = True)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 user_input_prediction = {}
 for column in column_names:
