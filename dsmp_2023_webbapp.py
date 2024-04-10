@@ -81,5 +81,3 @@ if st.sidebar.button("Predict Electricity Prices"):
     domain = {'x': [0, 1], 'y': [0, 1]},
     gauge = {'axis': {'range': [10, 20]}}
   ))
-
-  fig.show()
