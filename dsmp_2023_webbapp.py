@@ -67,7 +67,7 @@ if st.sidebar.button("Predict Electricity Prices"):
     value = np.round(result[1],2),
     title = {'text': "Electricity Price (CAD Cents/KWh)"},
     domain = {'x': [0, 1], 'y': [0, 1]},
-    gauge = {'axis': {'range': [np.round(result.min(),0), np.round(result.max(),0)]}, 'bar': {'color': "royalblue"}}
+    gauge = {'axis': {'range': [np.round(result.min(),0)-1, np.round(result.max(),0)+1]}, 'bar': {'color': "royalblue"}}
   ))
   #st.plotly_chart(fig1, use_container_width=True)
   data_container = st.container()
