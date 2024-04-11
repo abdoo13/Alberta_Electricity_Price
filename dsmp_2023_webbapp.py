@@ -100,5 +100,7 @@ if st.sidebar.button("Predict Electricity Prices"):
     text='doubles every 2 days', angle=0
     ).encode(x='x:Q', y='y:Q'
              )
+  annotations = [[df_2['Daily End-Use Demand'][1], np.round(result[1],2), 'Fight begins']]
+  st.text(np.round(result[1],2))
   st.altair_chart(c, use_container_width=True)
   #st.altair_chart(chart+text)
