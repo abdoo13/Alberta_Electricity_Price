@@ -57,7 +57,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   fig1 = go.Figure(go.Indicator(
     mode = "gauge+number",
-    value = np.round(result[1],2),
+    value = df_2['Daily End-Use Demand'][0],
     title = {'text': "'Daily End-Use Demand (GWh)'"},
     domain = {'x': [0, 1], 'y': [0, 1]},
     gauge = {'axis': {'range': [np.round(result.min(),0)-2, np.round(result.max(),0)+2]}}
