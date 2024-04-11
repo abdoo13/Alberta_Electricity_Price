@@ -27,7 +27,8 @@ for column in column_names:
 
 st.title('Predicting Electricity Prices in the Alberta Region')
 st.markdown('This web application allows predicting electricty prices in the Alberta region for the following sectors: "Residential", "Commercial" and "Industrial".')
-st.markdown('<div style="text-align: justify;">Hello World!</div>', unsafe_allow_html=True)
+dd = 'This web application allows predicting electricty prices in the Alberta region for the following sectors: "Residential", "Commercial" and "Industrial".'
+st.markdown('<div style="text-align: justify;">dd</div>', unsafe_allow_html=True)
 st.markdown('A machine learning model is embeded to this app and predictions are made according to this model. This ML model was built on data from the "Canada’s Energy Future 2023" report published online by the Canada Energy Regulator (CER) in addition to some weather data pulled out from the "Weather Underground" official website".')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # Predict Button
