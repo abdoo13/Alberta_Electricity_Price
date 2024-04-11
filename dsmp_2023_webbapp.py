@@ -1,4 +1,4 @@
-import streamlit as st
+ultsimport streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
@@ -47,7 +47,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   model = joblib.load('rfr_model.sav')
 
   #Predict and display the results
-  st.subheader('Prediction')
+  st.subheader('Prediction Results')
   result = model.predict(df.values)
   #st.text(np.round(result,2))
   df_2 = pd.DataFrame({'Threshold':['Lower', 'Prediction', 'Upper'], 'Daily End-Use Demand':df['Daily End-Use Demand (GWh)'], 'Electricity Price':np.round(result,2)})
