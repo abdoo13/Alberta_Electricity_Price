@@ -98,7 +98,7 @@ if st.sidebar.button("Predict Electricity Prices"):
       #+alt.Chart(pd.DataFrame({'y': [12.3]})).mark_rule().encode(y='y')
       +alt.Chart(annotations).mark_text().encode(
         x='x:Q',
-        y='y:N',
+        y='y:Q',
         text='note:N',
         ) 
       )
