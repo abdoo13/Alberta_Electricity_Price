@@ -96,7 +96,7 @@ if st.sidebar.button("Predict Electricity Prices"):
                                         ).properties(title="The Title")
       #+alt.Chart(pd.DataFrame({'y': [12.3]})).mark_rule().encode(y='y')
        )
-  text = alt.Chart({'values':[{'x': 20, 'y': 10}]}).mark_text(
+  text = alt.Chart({'values':[{'x': 130, 'y': np.round(result[1],2)}]}).mark_text(
     text='doubles every 2 days', angle=0
     ).encode(x='x:Q', y='y:Q'
              )
