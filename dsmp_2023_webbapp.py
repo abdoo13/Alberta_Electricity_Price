@@ -51,7 +51,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   result = model.predict(df.values)
   #st.text(np.round(result,2))
   df_2 = pd.DataFrame({'Threshold':['Lower', 'Prediction', 'Upper'], 'Daily End-Use Demand':df['Daily End-Use Demand (GWh)'], 'Electricity Price':np.round(result,2)})
-  #st.dataframe(df_2, hide_index=True)
+  st.dataframe(df_2, hide_index=True)
   #st.markdown(df_2.style.hide(axis="index").to_html(), unsafe_allow_html=True)
   #st.bar_chart(df_2, x='Cat', y=['Daily End-Use Demand', 'Electricity Price'])
   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
