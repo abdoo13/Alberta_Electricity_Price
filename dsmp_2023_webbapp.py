@@ -77,7 +77,7 @@ if st.sidebar.button("Predict Electricity Prices"):
         st.plotly_chart(fig1, use_container_width=True)
     with plot2:
         st.plotly_chart(fig2, use_container_width=True)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   delta_ = df_2['Daily End-Use Demand'][2] - df_2['Daily End-Use Demand'][0]
   df_3 = pd.DataFrame(columns=column_names[1:])
   df_3['Daily End-Use Demand (GWh)'] = [df['Daily End-Use Demand (GWh)'][0] + j*(delta_/10) for j in range(0, 11)]
