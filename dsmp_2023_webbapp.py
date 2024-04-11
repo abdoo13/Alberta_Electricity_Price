@@ -94,7 +94,7 @@ if st.sidebar.button("Predict Electricity Prices"):
                                         x = alt.X(cols_3[0]),
                                         y = alt.Y(cols_3[-1], scale=alt.Scale(domain=[np.round(df_3['Electricity Price (CAD Cents/KWh)'].min(), 1)-0.2, 
                                                                                       np.round(df_3['Electricity Price (CAD Cents/KWh)'].max(), 1)+0.2]))
-                                        ).properties(title="The Title")
+                                        ).properties(title="Expected Electricity Price vs Daily Energy End-Use Demand")
       #+alt.Chart(pd.DataFrame({'y': [12.3]})).mark_rule().encode(y='y')
       )
   #text = alt.Chart({'values':[{'x': df_2['Daily End-Use Demand'][1], 'y': np.round(result[1],2)}]}).mark_text(
