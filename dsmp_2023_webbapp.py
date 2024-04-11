@@ -60,7 +60,7 @@ if st.sidebar.button("Predict Electricity Prices"):
     value = df_2['Daily End-Use Demand'][1],
     title = {'text': "Daily End-Use Demand (GWh)"},
     domain = {'x': [0, 1], 'y': [0, 1]},
-    gauge = {'axis': {'range': [np.round(df_2['Daily End-Use Demand'][1],0)-2, np.round(df_2['Daily End-Use Demand'][1],0)+2]}, 'bar': {'color': "royalblue"}}
+    gauge = {'axis': {'range': [np.round(df_2['Daily End-Use Demand'][1],0)-2, np.round(df_2['Daily End-Use Demand'][1],0)+2]}, 'bar': {'color': "red"}}
   ))
   fig2 = go.Figure(go.Indicator(
     mode = "gauge+number",
