@@ -55,11 +55,10 @@ if st.sidebar.button("Predict Electricity Prices"):
   #st.markdown(df_2.style.hide(axis="index").to_html(), unsafe_allow_html=True)
   #st.bar_chart(df_2, x='Cat', y=['Daily End-Use Demand', 'Electricity Price'])
   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-  st.text(df_2['Daily End-Use Demand'][1])
   fig1 = go.Figure(go.Indicator(
     mode = "gauge+number",
     value = df_2['Daily End-Use Demand'][1],
-    title = {'text': "'Daily End-Use Demand (GWh)'"},
+    title = {'text': "Daily End-Use Demand (GWh)"},
     domain = {'x': [0, 1], 'y': [0, 1]},
     gauge = {'axis': {'range': [np.round(result.min(),0)-2, np.round(result.max(),0)+2]}}
   ))
