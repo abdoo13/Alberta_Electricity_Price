@@ -60,14 +60,14 @@ if st.sidebar.button("Predict Electricity Prices"):
     value = df_2['Daily End-Use Demand'][1],
     title = {'text': "Daily End-Use Demand (GWh)"},
     domain = {'x': [0, 1], 'y': [0, 1]},
-    gauge = {'axis': {'range': [np.round(df_2['Daily End-Use Demand'].min(),0)-2, np.round(df_2['Daily End-Use Demand'].max(),0)+2]}, 'bar': {'color': "red"}}
+    gauge = {'axis': {'range': [np.round(df_2['Daily End-Use Demand'].min(),0), np.round(df_2['Daily End-Use Demand'].max(),0)]}, 'bar': {'color': "red"}}
   ))
   fig2 = go.Figure(go.Indicator(
     mode = "gauge+number",
     value = np.round(result[1],2),
     title = {'text': "Electricity Price (CAD Cents/KWh)"},
     domain = {'x': [0, 1], 'y': [0, 1]},
-    gauge = {'axis': {'range': [np.round(result.min(),0)-2, np.round(result.max(),0)+2]}, 'bar': {'color': "royalblue"}}
+    gauge = {'axis': {'range': [np.round(result.min(),0), np.round(result.max(),0)]}, 'bar': {'color': "royalblue"}}
   ))
   #st.plotly_chart(fig1, use_container_width=True)
   data_container = st.container()
