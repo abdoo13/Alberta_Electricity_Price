@@ -80,7 +80,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   delta_ = df_2['Daily End-Use Demand'][2] - df_2['Daily End-Use Demand'][0]
   df_3 = pd.DataFrame(columns=column_names[1:])
-  df_3['Daily End-Use Demand (GWh)'] = [df['Daily End-Use Demand (GWh)'][0] + j*(delta_/100) for j in range(0, 101)]
+  df_3['Daily End-Use Demand (GWh)'] = [df['Daily End-Use Demand (GWh)'][0] + j*(delta_/10) for j in range(0, 11)]
   df_3['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df_3['Daily End-Use Demand (GWh)']*0.4688
   for col in list(df_3.columns)[2:]:
     df_3[col] = df[col][0]
@@ -94,6 +94,6 @@ if st.sidebar.button("Predict Electricity Prices"):
                                         y = alt.Y(cols_3[-1], scale=alt.Scale(domain=[np.round(df_3['Electricity Price (CAD Cents/KWh)'].min(), 1)-0.2, 
                                                                                       np.round(df_3['Electricity Price (CAD Cents/KWh)'].max(), 1)+0.2]))
                                         )
-      #+alt.Chart(pd.DataFrame({'y': [12.3]})).mark_rule().encode(y='y')
+      +alt.Chart(pd.DataFrame({'y': [12.3]})).mark_rule().encode(y='y')
       )
   st.altair_chart(c, use_container_width=True)
