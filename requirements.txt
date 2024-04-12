@@ -6,3 +6,4 @@ altair
 plotly
 matplotlib
 plotly
+random
