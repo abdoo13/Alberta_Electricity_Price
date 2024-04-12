@@ -5,6 +5,7 @@ import joblib
 import altair as alt
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
+import random
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 data = pd.read_csv('df_.csv')
 # Get column names
