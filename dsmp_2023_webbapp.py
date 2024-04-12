@@ -45,7 +45,7 @@ plt.bar(Car,Sales,color=np.random.rand(len(Sales),3))
 plt.title('Car Sales 2022')
 plt.xlabel('Cars')
 plt.ylabel('Sales')
-plt.show()
+st.pyplot()
 
 if st.sidebar.button("Predict Electricity Prices"):
   df = pd.DataFrame()
