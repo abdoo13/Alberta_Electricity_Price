@@ -30,6 +30,7 @@ st.markdown('This web application allows predicting electricty prices in the Alb
 st.markdown('A machine learning model is embeded to this app and predictions are made according to this model. This ML model was built on data from the "Canada’s Energy Future 2023" report published online by the Canada Energy Regulator (CER) in addition to some weather data pulled out from the "Weather Underground" official website".')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # Predict Button
+fig, ax = plt.subplots()
 plt.rcParams['figure.figsize']=(10,6)
 
 Car=['car_A','car_B','car_C','Car_D','Car_E']
@@ -41,11 +42,11 @@ plt.annotate('lowest Sales',xy=('car_A',2100),xytext=('car_B',4000),
              ,horizontalalignment='center')
 
 
-plt.bar(Car,Sales,color=np.random.rand(len(Sales),3))
+ax.bar(Car,Sales,color=np.random.rand(len(Sales),3))
 plt.title('Car Sales 2022')
 plt.xlabel('Cars')
 plt.ylabel('Sales')
-st.pyplot()
+st.pyplot(fig)
 
 if st.sidebar.button("Predict Electricity Prices"):
   df = pd.DataFrame()
