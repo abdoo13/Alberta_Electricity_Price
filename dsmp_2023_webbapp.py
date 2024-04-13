@@ -97,3 +97,24 @@ if st.sidebar.button("Predict Electricity Prices"):
         font=dict(size=20, color="#242526"),
     )
   st.plotly_chart(fig_3)
+
+
+  mystyle = '''
+    <style>
+        p {
+            text-align: justify;
+        }
+    </style>
+    '''
+
+  st.markdown(mystyle, unsafe_allow_html=True)
+
+  # Generate Three equal columns
+  c1, c2, c3 = st.columns((1, 1, 1))
+
+  with c1:
+      st.info("""Streamlit is more than just a way to make data apps, 
+              it's also a community of creators that share their apps 
+              and ideas and help each other make their work better. Please 
+              come join us on the community forum. We love to hear your questions, 
+              ideas, and help you work through your bugs — stop by today!""")
