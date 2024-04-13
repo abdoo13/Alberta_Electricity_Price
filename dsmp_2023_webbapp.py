@@ -116,7 +116,7 @@ if st.sidebar.button("Predict Electricity Prices"):
         showarrow=True,
         arrowhead=4,
         xanchor="right",
-        font=dict(size=25, color="#242526"),
+        font=dict(size=20, color="#242526"),
     )
   st.plotly_chart(fig_4)
   #st.altair_chart(chart+text)
