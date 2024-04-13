@@ -29,21 +29,6 @@ st.title('Predicting Electricity Prices in the Alberta Region')
 st.markdown('This web application allows predicting electricty prices in the Alberta region for the following sectors: "Residential", "Commercial" and "Industrial".')
 st.markdown('A machine learning model is embeded to this app and predictions are made according to this model. This ML model was built on data from the "Canada’s Energy Future 2023" report published online by the Canada Energy Regulator (CER) in addition to some weather data pulled out from the "Weather Underground" official website".')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-x = np.arange(10)
-fig_2 = go.Figure(data=go.Scatter(x=x, y=x ** 2))
-fig_2.add_annotation(
-        text="Here's your price",
-        x=5,
-        y=25,
-        showarrow=True,
-        arrowhead=4,
-        xanchor="right",
-        font=dict(size=25, color="#242526"),
-    )
-st.plotly_chart(fig_2)
-
-
-
 # Predict Button
 if st.sidebar.button("Predict Electricity Prices"):
   df = pd.DataFrame()
@@ -131,6 +116,5 @@ if st.sidebar.button("Predict Electricity Prices"):
         xanchor="right",
         font=dict(size=25, color="#242526"),
     )
-  st.plotly_chart(fig_4)
   st.plotly_chart(fig_4)
   #st.altair_chart(chart+text)
