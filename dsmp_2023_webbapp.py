@@ -112,7 +112,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   # Generate Three equal columns
   c1, c2, c3 = st.columns(3)
 
-  with c1:
+  with c2:
       st.info("""Streamlit is more than just a way to make data apps, 
               it's also a community of creators that share their apps 
               and ideas and help each other make their work better. Please 
