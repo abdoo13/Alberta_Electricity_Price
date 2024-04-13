@@ -96,7 +96,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   fig_3 = go.Figure(data=go.Scatter(x=df_3[cols_3[0]], y=df_3[cols_3[-1]], mode='lines+markers', marker_color='RoyalBlue'))
   fig_3.update_layout(xaxis_title=cols_3[0], yaxis_title=cols_3[-1], width=1000)
   fig_3.add_annotation(
-        text="Here's your price",
+        text="Your price lies in here",
         x=df_2['Daily End-Use Demand'][1],
         y=np.round(result[1],2),
         showarrow=True,
