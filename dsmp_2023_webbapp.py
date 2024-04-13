@@ -39,7 +39,7 @@ fig_2.add_annotation(
         yref="paper",
         x=0,
         y=1.1,
-        showarrow=False,
+        showarrow=True,
         align="left",
         xanchor="left",
         font=dict(size=20, color="#242526"),
