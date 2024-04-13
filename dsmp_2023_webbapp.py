@@ -33,7 +33,21 @@ x = np.arange(10)
 fig_2 = go.Figure(data=go.Scatter(x=x, y=x ** 2))
 
 #chart_2 = st.empty()
+fig_2.add_annotation(
+        text=annotation_2,
+        xref="paper",
+        yref="paper",
+        x=0,
+        y=1.1,
+        showarrow=False,
+        align="left",
+        xanchor="left",
+        font=dict(size=20, color="#242526"),
+    )
 st.plotly_chart(fig_2)
+
+
+
 # Predict Button
 if st.sidebar.button("Predict Electricity Prices"):
   df = pd.DataFrame()
