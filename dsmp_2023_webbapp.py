@@ -40,7 +40,7 @@ fig_2.add_annotation(
         showarrow=True,
         arrowhead=4,
         xanchor="right",
-        font=dict(size=30, color="#242526"),
+        font=dict(size=25, color="#242526"),
     )
 st.plotly_chart(fig_2)
 
