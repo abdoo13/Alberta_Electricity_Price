@@ -86,12 +86,11 @@ if st.sidebar.button("Predict Electricity Prices"):
   for col in list(df_3.columns)[2:]:
     df_3[col] = df[col][0]
   df_3['Electricity Price (CAD Cents/KWh)'] = model.predict(df_3.values)
-  #st.dataframe(df_3)
   cols_3 = list(df_3.columns)
   
-  fig_4 = go.Figure(data=go.Scatter(x=df_3[cols_3[0]], y=df_3[cols_3[-1]], mode='lines+markers', marker_color='RoyalBlue'))
-  fig_4.update_layout(xaxis_title=cols_3[0], yaxis_title=cols_3[-1], width=1000)
-  fig_4.add_annotation(
+  fig_3 = go.Figure(data=go.Scatter(x=df_3[cols_3[0]], y=df_3[cols_3[-1]], mode='lines+markers', marker_color='RoyalBlue'))
+  fig_3.update_layout(xaxis_title=cols_3[0], yaxis_title=cols_3[-1], width=1000)
+  fig_3.add_annotation(
         text="Here's your price",
         x=df_2['Daily End-Use Demand'][1],
         y=np.round(result[1],2),
@@ -100,5 +99,4 @@ if st.sidebar.button("Predict Electricity Prices"):
         xanchor="right",
         font=dict(size=20, color="#242526"),
     )
-  st.plotly_chart(fig_4)
-  #st.altair_chart(chart+text)
+  st.plotly_chart(fig_3)
