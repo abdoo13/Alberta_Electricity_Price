@@ -34,9 +34,9 @@ fig_2 = go.Figure(data=go.Scatter(x=x, y=x ** 2))
 
 #chart_2 = st.empty()
 fig_2.add_annotation(
-        text="Text",
-        x=0,
-        y=0,
+        text="Here's your price",
+        x=5,
+        y=25,
         showarrow=True,
         arrowhead=1,
         font=dict(size=20, color="#242526"),
