@@ -34,7 +34,7 @@ fig_2 = go.Figure(data=go.Scatter(x=x, y=x ** 2))
 
 #chart_2 = st.empty()
 fig_2.add_annotation(
-        text=annotation_2,
+        text="Text",
         xref="paper",
         yref="paper",
         x=0,
