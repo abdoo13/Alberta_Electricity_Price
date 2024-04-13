@@ -32,8 +32,8 @@ st.markdown('A machine learning model is embeded to this app and predictions are
 x = np.arange(10)
 fig_2 = go.Figure(data=go.Scatter(x=x, y=x ** 2))
 
-chart_2 = st.empty()
-chart_2.plotly_chart(fig_2)
+#chart_2 = st.empty()
+st.plotly_chart(fig_2)
 # Predict Button
 if st.sidebar.button("Predict Electricity Prices"):
   df = pd.DataFrame()
