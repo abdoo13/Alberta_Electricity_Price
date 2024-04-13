@@ -107,7 +107,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   
   #st.altair_chart(c, use_container_width=True)
 
-  fig_4 = go.Figure(data=go.Scatter(data=df_3, x=cols_3[0], y=cols_3[-1]))
+  fig_4 = go.Figure(data=go.Scatter(x=df_3[cols_3[0]], y=df_3[cols_3[-1]]))
   fig_4.add_annotation(
         text="Here's your price",
         x=df_2['Daily End-Use Demand'][1],
