@@ -4,7 +4,6 @@ import numpy as np
 import joblib
 import altair as alt
 import plotly.graph_objects as go
-import plotly.express as px
 import matplotlib.pyplot as plt
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 data = pd.read_csv('df_.csv')
