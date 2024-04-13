@@ -53,14 +53,14 @@ if st.sidebar.button("Predict Electricity Prices"):
   df_2 = pd.DataFrame({'Threshold':['Lower', 'Prediction', 'Upper'], 'Daily End-Use Demand':df['Daily End-Use Demand (GWh)'], 'Electricity Price':np.round(result,2)})
   #st.markdown(df_2.style.hide(axis="index").to_html(), unsafe_allow_html=True)
   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-  fig1 = go.Figure(go.Indicator(
+  fig_1 = go.Figure(go.Indicator(
     mode = "gauge+number",
     value = df_2['Daily End-Use Demand'][1],
     title = {'text': "Daily End-Use Demand (GWh)"},
     domain = {'x': [0, 1], 'y': [0, 1]},
     gauge = {'axis': {'range': [np.round(df_2['Daily End-Use Demand'].min(),0)-1, np.round(df_2['Daily End-Use Demand'].max(),0)]}, 'bar': {'color': "crimson"}}
   ))
-  fig2 = go.Figure(go.Indicator(
+  fig_2 = go.Figure(go.Indicator(
     mode = "gauge+number",
     value = np.round(result[1],2),
     title = {'text': "Electricity Price (CAD Cents/KWh)"},
@@ -72,9 +72,9 @@ if st.sidebar.button("Predict Electricity Prices"):
   with data_container:
     plot1, plot2 = st.columns(2)
     with plot1:
-        st.plotly_chart(fig1, use_container_width=True)
+        st.plotly_chart(fig_1, use_container_width=True)
     with plot2:
-        st.plotly_chart(fig2, use_container_width=True)
+        st.plotly_chart(fig_2, use_container_width=True)
   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   delta_ = df_2['Daily End-Use Demand'][2] - df_2['Daily End-Use Demand'][0]
   df_3 = pd.DataFrame(columns=column_names[1:])
@@ -97,24 +97,3 @@ if st.sidebar.button("Predict Electricity Prices"):
         font=dict(size=20, color="#242526"),
     )
   st.plotly_chart(fig_3)
-
-
-  mystyle = '''
-    <style>
-        p {
-            text-align: justify;
-        }
-    </style>
-    '''
-
-  st.markdown(mystyle, unsafe_allow_html=True)
-
-  # Generate Three equal columns
-  c1, c2, c3 = st.columns(3)
-
-  #with c2:
-  st.info("""Streamlit is more than just a way to make data apps, 
-              it's also a community of creators that share their apps 
-              and ideas and help each other make their work better. Please 
-              come join us on the community forum. We love to hear your questions, 
-              ideas, and help you work through your bugs — stop by today!""")
