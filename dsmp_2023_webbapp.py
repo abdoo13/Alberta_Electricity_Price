@@ -88,24 +88,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   df_3['Electricity Price (CAD Cents/KWh)'] = model.predict(df_3.values)
   #st.dataframe(df_3)
   cols_3 = list(df_3.columns)
-  #st.line_chart(df_3, x=cols_3[0], y=cols_3[-1])
-  #annotations = [[df_2['Daily End-Use Demand'][1], df_2['Daily End-Use Demand'][1], 'Predicted Electricity Price']]
-  annotations = [[df_2['Daily End-Use Demand'][1], np.round(result[1],2), 'Fight begins']]
-  c = (alt.Chart(df_3).mark_line().encode(
-                                        x = alt.X(cols_3[0]),
-                                        y = alt.Y(cols_3[-1], scale=alt.Scale(domain=[np.round(df_3['Electricity Price (CAD Cents/KWh)'].min(), 1)-0.2, 
-                                                                                      np.round(df_3['Electricity Price (CAD Cents/KWh)'].max(), 1)+0.2]))
-                                        ).properties(title="Expected Electricity Price vs Daily Energy End-Use Demand")
-      #+alt.Chart(pd.DataFrame({'y': [12.3]})).mark_rule().encode(y='y')
-      )
-  #text = alt.Chart({'values':[{'x': df_2['Daily End-Use Demand'][1], 'y': np.round(result[1],2)}]}).mark_text(
-  #  text='doubles every 2 days', angle=0
-  #  ).encode(x='x:Q', y='y:Q'
-  #             )
   
-  
-  #st.altair_chart(c, use_container_width=True)
-
   fig_4 = go.Figure(data=go.Scatter(x=df_3[cols_3[0]], y=df_3[cols_3[-1]], mode='lines+markers', marker_color='RoyalBlue'))
   fig_4.update_layout(xaxis_title=cols_3[0], yaxis_title=cols_3[-1], width=1000)
   fig_4.add_annotation(
