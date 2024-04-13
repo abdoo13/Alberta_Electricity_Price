@@ -101,13 +101,13 @@ if st.sidebar.button("Predict Electricity Prices"):
 
   mystyle = '''
     <style>
-         {
+        p {
             text-align: justify;
         }
     </style>
     '''
 
-  st.markdown(mystyle, unsafe_allow_html=True)
+  st.markdown(mystyle, unsafe_allow_html=False)
 
   # Generate Three equal columns
   c1, c2, c3 = st.columns(3)
