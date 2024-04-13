@@ -97,3 +97,12 @@ if st.sidebar.button("Predict Electricity Prices"):
         font=dict(size=20, color="#242526"),
     )
   st.plotly_chart(fig_3)
+  mystyle = '''
+    <style>
+        p {
+            text-align: justify;
+        }
+    </style>
+    '''
+
+  st.markdown(mystyle, unsafe_allow_html=True)
