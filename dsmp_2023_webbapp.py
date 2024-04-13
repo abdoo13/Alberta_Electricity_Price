@@ -31,8 +31,6 @@ st.markdown('A machine learning model is embeded to this app and predictions are
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 x = np.arange(10)
 fig_2 = go.Figure(data=go.Scatter(x=x, y=x ** 2))
-
-#chart_2 = st.empty()
 fig_2.add_annotation(
         text="Here's your price",
         x=5,
@@ -121,5 +119,18 @@ if st.sidebar.button("Predict Electricity Prices"):
   #             )
   
   
-  st.altair_chart(c, use_container_width=True)
+  #st.altair_chart(c, use_container_width=True)
+
+  fig_4 = go.Figure(data=go.Scatter(x=df_3[cols_3[0]], y=df_3[cols_3[-1]]))
+  fig_4.add_annotation(
+        text="Here's your price",
+        x=5,
+        y=25,
+        showarrow=True,
+        arrowhead=4,
+        xanchor="right",
+        font=dict(size=25, color="#242526"),
+    )
+  st.plotly_chart(fig_4)
+  st.plotly_chart(fig_4)
   #st.altair_chart(chart+text)
