@@ -37,7 +37,7 @@ fig_2.add_annotation(
         text="Text",
         xref="paper",
         yref="paper",
-        x=0,
+        x=5.25,
         y=1.1,
         showarrow=True,
         align="left",
