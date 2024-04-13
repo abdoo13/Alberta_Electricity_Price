@@ -110,7 +110,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   st.markdown(mystyle, unsafe_allow_html=True)
 
   # Generate Three equal columns
-  c1, c2, c3 = st.columns((1, 1, 2))
+  c1, c2, c3 = st.columns(1)
 
   with c1:
       st.info("""Streamlit is more than just a way to make data apps, 
