@@ -101,7 +101,7 @@ if st.sidebar.button("Predict Electricity Prices"):
 
   mystyle = '''
     <style>
-        p {
+         {
             text-align: justify;
         }
     </style>
