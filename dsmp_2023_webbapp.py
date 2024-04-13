@@ -29,6 +29,7 @@ st.title('Predicting Electricity Prices in the Alberta Region')
 st.markdown('This web application allows predicting electricty prices in the Alberta region for the following sectors: "Residential", "Commercial" and "Industrial".')
 st.markdown('A machine learning (ML) model is embeded to this app and predictions are made from this model. This ML model was built on data from the "Canada’s Energy Future 2023" report published online by '''
             the Canada Energy Regulator (CER) in addition to some weather data pulled out from the "Weather Underground" official website.')
+            '''
 mystyle = '''
     <style>
         p {
