@@ -40,8 +40,8 @@ st.markdown(mystyle, unsafe_allow_html=True)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # Predict Button
 if st.sidebar.button("Predict Electricity Prices"):
-  dd = Sector_EnergyUse(sector_)
-  st.text(dd)
+  Sector_ = Sector_EnergyUse(sector_)
+  #st.text(dd)
   df = pd.DataFrame()
   cols_ = []
   for key_ in user_input_prediction.keys():
@@ -58,7 +58,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   model = joblib.load('rfr_model.sav')
 
   #Predict and display the results
-  st.subheader('Prediction Results - '+str(dd))
+  st.subheader('Electricity Price - '+ str(Sector_) + 'Sector')
   result = model.predict(df.values)
   #st.text(np.round(result,2))
   df_2 = pd.DataFrame({'Threshold':['Lower', 'Prediction', 'Upper'], 'Daily End-Use Demand':df['Daily End-Use Demand (GWh)'], 'Electricity Price':np.round(result,2)})
