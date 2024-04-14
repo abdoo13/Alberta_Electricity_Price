@@ -5,6 +5,7 @@ import joblib
 import altair as alt
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
+from Fun_Sector_EnergyUse import *
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 data = pd.read_csv('df_.csv')
 # Get column names
