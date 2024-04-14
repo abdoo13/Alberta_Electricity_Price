@@ -39,8 +39,8 @@ st.markdown(mystyle, unsafe_allow_html=True)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # Predict Button
 if st.sidebar.button("Predict Electricity Prices"):
-  dd = Fun_Sector_EnergyUse(sector_)
-  st.text(dd)
+  #dd = Fun_Sector_EnergyUse(sector_)
+  #st.text(dd)
   df = pd.DataFrame()
   cols_ = []
   for key_ in user_input_prediction.keys():
