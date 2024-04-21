@@ -12,9 +12,8 @@ Initially, we started by seeking for parameters that are likely to influence ele
 -	Macroeconomic indicators.
 
   Using the Selenium package, electricity data grasped from the Canada Energy Regulator website (CER) [1] (prices, energy sources, energy consumption, macroeconomic indicators and GHG emission data). On the other hand, weather data have been scraped from Weather Underground [2] (temperature, humidity, wind speed).
-After gathering all the data using multiple join/merge operations on Pandas, the final dataset that we intended to work on covered the period spanning from 2014-2023 and we ended up dealing with a dataset having 416,580 rows and 23 variables. The exploratory data analysis process was then initiated and it turned out that electricity price for the three aforementioned sectors is correlated to end-use energy demand, GHG emissions, real gross domestic product, average and minimum daily temperatures.
 
-  With regards to the ML process, different ML algorithms were investigated (Random Forest, LightGBM and Xgboost) in order to come up with best regressor that will help us predict electricity prices with minimum error and without any likelihood to overfit. The training and testing process was carried out along with hyperparameters fine tuning (HyperOpt package). The simulations indicated the best goodness of fit can be obtained by the Random Forest regressor.
+  With regards to the ML process, different ML algorithms were investigated (Random Forest, LightGBM and Xgboost) in order to come up with best regressor that will help us predict electricity prices with minimum error and without any likelihood to overfit. The training and testing process was carried out along with hyperparameters fine tuning (HyperOpt package). The simulations indicated the best goodness of fit can be obtained by the Random Forest regressor. 
  	This web application has been implemented based on the Streamlit framework where one can easily have an idea of what electricity would be for each of the three sectors.
 
 References
