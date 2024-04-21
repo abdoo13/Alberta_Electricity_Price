@@ -1,7 +1,7 @@
 # Electricity_Prices_Alberta
 This project was carried out as part of the 2023 SPE Calgary Data Science Metentoring Program (DSMP)
 
-Summary
+## Summary
 
   The machine learning (ML) solution that was built as part of this challenge aims to forecast electricity prices in the Alberta region for the following sectors: “Residential”, “Commercial” and “Industrial”.
 Initially, we started by seeking for parameters that are likely to influence electricity price, then trying to get or integrate the data that we came across in a single and a comprehensive dataset. Our primary findings indicated electricity price being affected by or correlated to:
