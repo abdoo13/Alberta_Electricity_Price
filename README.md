@@ -15,4 +15,5 @@ After gathering all the data using multiple join/merge operations on Pandas, the
 
 References:
 [1]: https://apps.cer-rec.gc.ca/ftrppndc/dflt.aspx?GoCTemplateCulture=en-CA
+
 [2]: https://www.wunderground.com/
