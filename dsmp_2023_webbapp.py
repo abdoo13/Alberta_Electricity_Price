@@ -55,7 +55,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   df = df[column_names[1:]]
   
   #Load the ML Model
-  model = joblib.load('rfr_model.sav')
+  model = joblib.load('rfr_model_Hum.sav')
 
   #Predict and display the results
   st.subheader('Electricity Price - '+ str(Sector_) + ' Sector')
