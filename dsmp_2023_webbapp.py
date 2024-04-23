@@ -50,7 +50,7 @@ if st.sidebar.button("Predict Electricity Prices"):
       df[key_] = [round(float(temp['Daily End-Use Demand (GWh)'].min())), user_input_prediction[key_], round(float(temp['Daily End-Use Demand (GWh)'].max()))]
     else:
       df[key_] = [user_input_prediction[key_]]*3
-  df['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df['Daily End-Use Demand (GWh)']*0.4688
+  df['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = -0.003*df['Daily End-Use Demand (GWh)']**2 + df['Daily End-Use Demand (GWh)']*0.4722
   #
   df = df[column_names[1:]]
   
