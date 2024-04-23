@@ -93,9 +93,11 @@ if st.sidebar.button("Predict Electricity Prices"):
   df_3['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df_3['Daily End-Use Demand (GWh)']*0.4688
   for col in list(df_3.columns)[2:]:
     df_3[col] = df[col][0]
+  st.dataframe(df_3)
+
+  
   df_3['Electricity Price (CAD Cents/KWh)'] = model.predict(df_3.values)
   cols_3 = list(df_3.columns)
-  st.dataframe(df_3)
   fig_3 = go.Figure(data=go.Scatter(x=df_3[cols_3[0]], y=df_3[cols_3[-1]], mode='lines+markers', marker_color='RoyalBlue'))
   fig_3.update_layout(xaxis_title=cols_3[0], yaxis_title=cols_3[-1], width=1000)
   fig_3.add_annotation(
