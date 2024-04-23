@@ -95,7 +95,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   st.dataframe(df_3)
 
   
-  for col in list(df_3.columns)[2:]:
+  for col in list(df_3.columns)[1:]:
     df_3[col] = df[col][0]
   df_3['Electricity Price (CAD Cents/KWh)'] = model.predict(df_3.values)
   cols_3 = list(df_3.columns)
