@@ -11,9 +11,7 @@ Initially, we started by seeking for parameters that are likely to influence ele
 -	Weather conditions.
 -	Macroeconomic indicators.
 
-  Using the Selenium package, electricity data grasped from the Canada Energy Regulator website (CER) [1] (prices, energy sources, energy consumption, macroeconomic indicators and GHG emission data). On the other hand, weather data have been scraped from Weather Underground [2] (temperature, humidity, wind speed). The EDA process indicated electricity price is strongly correlated to: End-Use Demand, Real Gross Domestic Product, Temp_Max, Temp_Min & Hum_Min. 
-![image](https://github.com/abdoo13/Alberta_Trial/assets/45192214/04e62212-8acf-4c99-99fa-b19c3c76be3c)
-
+  Using the Selenium package, electricity data grasped from the Canada Energy Regulator website (CER) [1] (prices, energy sources, energy consumption, macroeconomic indicators and GHG emission data). On the other hand, weather data have been scraped from Weather Underground [2] (temperature, humidity, wind speed). The EDA process indicated electricity price is strongly correlated to: End-Use Demand, Real Gross Domestic Product, Temp_Max, Temp_Min & Hum_Min.
 
   With regards to the ML process, different ML algorithms were investigated (Random Forest, LightGBM and Xgboost) in order to come up with best regressor that will help us predict electricity prices with minimum error and without any likelihood to overfit. The training and testing process was carried out along with hyperparameters fine tuning (HyperOpt package). The simulations indicated the best goodness of fit can be obtained by the Random Forest regressor.
  	This web application has been implemented based on the Streamlit framework where one can easily have an idea of what electricity would be for each of the three sectors.
