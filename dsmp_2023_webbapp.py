@@ -62,7 +62,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   result = model.predict(df.values)
   #st.text(np.round(result,2))
   df_2 = pd.DataFrame({'Threshold':['Lower', 'Prediction', 'Upper'], 'Daily End-Use Demand':df['Daily End-Use Demand (GWh)'], 'Electricity Price':np.round(result,2)})
-  #st.markdown(df_2.style.hide(axis="index").to_html(), unsafe_allow_html=True)
+  st.markdown(df_2.style.hide(axis="index").to_html(), unsafe_allow_html=True)
   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   fig_1 = go.Figure(go.Indicator(
     mode = "gauge+number",
@@ -91,7 +91,7 @@ if st.sidebar.button("Predict Electricity Prices"):
   df_3 = pd.DataFrame(columns=column_names[1:])
   df_3['Daily End-Use Demand (GWh)'] = [df['Daily End-Use Demand (GWh)'][0] + j*(delta_/50) for j in range(0, 51)]
   df_3['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df_3['Daily End-Use Demand (GWh)']*0.4688
-  st.dataframe(df_3)
+  #st.dataframe(df_3)
   for col in list(df_3.columns)[2:]:
     df_3[col] = df[col][0]
   df_3['Electricity Price (CAD Cents/KWh)'] = model.predict(df_3.values)
