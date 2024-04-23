@@ -88,11 +88,10 @@ if st.sidebar.button("Predict Electricity Prices"):
         st.plotly_chart(fig_2, use_container_width=True)
   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   delta_ = df_2['Daily End-Use Demand'][2] - df_2['Daily End-Use Demand'][0]
-  st.text(column_names[1:])
   df_3 = pd.DataFrame(columns=column_names[1:])
   df_3['Daily End-Use Demand (GWh)'] = [df['Daily End-Use Demand (GWh)'][0] + j*(delta_/50) for j in range(0, 51)]
   df_3['Daily GHG Emmisions (Tons_CO2_Equivalent)'] = df_3['Daily End-Use Demand (GWh)']*0.4688
-  #st.dataframe(df_3)
+  st.dataframe(df_3)
   for col in list(df_3.columns)[2:]:
     df_3[col] = df[col][0]
   df_3['Electricity Price (CAD Cents/KWh)'] = model.predict(df_3.values)
